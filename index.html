@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <script>
+    try {
+      document.querySelector('meta[name="color-scheme"]').content = localStorage.getItem("color-scheme") ?? "light dark";
+    } catch {}
+  </script>
+  <title>Testen statt Meckern | BG BiBA Basketball-Regelquiz</title>
+  <meta name="description" content="10 zufällige Basketball-Regelfragen der BG BiBA (Basketballgemeinschaft Bierden-Bassen-Achim). Teste dein Regelwissen direkt auf der Tribüne!">
+  <link rel="icon" type="image/png" href="./assets/bgbiba_full_tiny.png">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link visually-hidden">Zum Hauptinhalt springen</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand-identity">
+        <div class="brand-logo-wrap">
+          <img
+            src="./assets/bgbiba_full_black_white.png"
+            alt="Vereinswappen der BG BiBA"
+            class="brand-logo"
+            width="52"
+            height="52"
+            fetchpriority="high"
+          >
+        </div>
+        <div class="brand-titles">
+          <span class="brand-club">BG BiBA</span>
+          <span class="brand-initiative">Testen statt Meckern</span>
+        </div>
+      </div>
+
+      <button type="button" id="theme-toggle" class="theme-toggle-btn">
+        <span class="theme-option-dark">
+          <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <span class="visually-hidden">Zu dunklem Design wechseln</span>
+        </span>
+        <span class="theme-option-light">
+          <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <span class="visually-hidden">Zu hellem Design wechseln</span>
+        </span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main-content" class="app-main">
+    <div id="sr-announcer" class="visually-hidden" aria-live="polite" aria-atomic="true"></div>
+
+    <!-- SCREEN 1: START -->
+    <section id="view-start" class="quiz-view card">
+      <div class="hero-top">
+        <span class="badge badge-primary">🏀 Tribünen-Challenge · 10 Fragen</span>
+        <h1 id="start-heading" class="hero-title" tabindex="-1">
+          Hand aufs Herz: Würdest du auf dem Feld immer richtig entscheiden?
+        </h1>
+        <p class="hero-lead">
+          Von der Tribüne sieht alles ganz einfach aus. Aber unsere <strong>Schiedsrichter</strong> auf dem Parkett und unsere <strong>Anschreiber &amp; Zeitnehmer</strong> am Kampfrichtertisch müssen hunderte Regeln in Sekundenbruchteilen anwenden.
+        </p>
+      </div>
+
+      <ul class="feature-list" role="list">
+        <li class="feature-item">
+          <span class="feature-icon" aria-hidden="true">🎲</span>
+          <div>
+            <strong>10 zufällige Spielsituationen</strong>
+            <span>Von Schritt 0 und Zylinderprinzip bis zur 14-Sekunden-Wurfuhr und dem Anschreibertisch.</span>
+          </div>
+        </li>
+        <li class="feature-item">
+          <span class="feature-icon" aria-hidden="true">💡</span>
+          <div>
+            <strong>Sofortiger Aha-Effekt</strong>
+            <span>Nach jeder Antwort erfährst du kurz &amp; locker, was wirklich im offiziellen Regelwerk steht.</span>
+          </div>
+        </li>
+        <li class="feature-item">
+          <span class="feature-icon" aria-hidden="true">⚡</span>
+          <div>
+            <strong>Perfekt für die Viertelpause</strong>
+            <span>Keine Anmeldung, kein App-Download – dauert nur rund 2 Minuten.</span>
+          </div>
+        </li>
+      </ul>
+
+      <div class="hero-actions">
+        <button type="button" id="btn-start-quiz" class="btn btn-primary btn-large">
+          Jetzt Regelwissen testen
+        </button>
+      </div>
+    </section>
+
+    <!-- SCREEN 2: QUIZ FRAGEN -->
+    <section id="view-quiz" class="quiz-view" hidden>
+      <div class="progress-panel card-subtle">
+        <div class="progress-meta">
+          <span id="question-counter" class="question-counter">Frage 1 von 10</span>
+          <span id="score-counter" class="score-pill">0 / 10 richtig</span>
+        </div>
+        <progress id="quiz-progress" class="quiz-progress" value="1" max="10" aria-label="Quiz-Fortschritt"></progress>
+      </div>
+
+      <article class="quiz-card card">
+        <div class="question-badges">
+          <span id="question-category" class="badge badge-primary">Kategorie</span>
+          <span id="question-role" class="badge badge-outline">Fokus: Schiedsrichter</span>
+        </div>
+
+        <h2 id="question-text" class="question-title" tabindex="-1">
+          Frage wird geladen…
+        </h2>
+
+        <div id="options-container" class="options-grid" role="group" aria-labelledby="question-text">
+          <!-- Antwort-Buttons werden dynamisch per JS eingefügt -->
+        </div>
+
+        <div id="explanation-box" class="explanation-box" hidden>
+          <div class="explanation-header">
+            <span id="feedback-badge" class="feedback-badge">✓ Richtig</span>
+            <h3 id="feedback-headline" class="feedback-headline">Stark entschieden!</h3>
+          </div>
+          <p id="explanation-text" class="explanation-text"></p>
+          <p id="rule-reference" class="rule-reference"></p>
+
+          <button type="button" id="btn-next-question" class="btn btn-primary btn-large">
+            Nächste Frage
+          </button>
+        </div>
+      </article>
+    </section>
+
+    <!-- SCREEN 3: AUSWERTUNG -->
+    <section id="view-result" class="quiz-view" hidden>
+      <div class="result-card card">
+        <div class="result-score-header">
+          <div class="score-ring" aria-hidden="true">
+            <span id="result-score-value" class="score-ring-number">0/10</span>
+            <span class="score-ring-label">Richtige</span>
+          </div>
+          <span id="result-rank-badge" class="badge badge-primary">Ergebnis</span>
+        </div>
+
+        <h2 id="result-headline" class="result-headline" tabindex="-1">
+          Auswertung
+        </h2>
+        <p id="result-subtext" class="result-subtext"></p>
+
+        <aside class="officials-box" aria-labelledby="officials-box-title">
+          <div class="officials-header">
+            <div class="officials-logo-wrap">
+              <img
+                src="./assets/bgbiba_full_small.png"
+                alt="Logo der BG BiBA"
+                class="officials-logo logo-light-only"
+                width="52"
+                height="52"
+                loading="lazy"
+              >
+              <img
+                src="./assets/bgbiba_full_black_white.png"
+                alt="Logo der BG BiBA"
+                class="officials-logo logo-dark-only"
+                width="52"
+                height="52"
+                loading="lazy"
+              >
+            </div>
+            <div>
+              <h3 id="officials-box-title" class="officials-title">Ohne Schiris &amp; Kampfgericht kein Spiel!</h3>
+              <p class="officials-subtitle">Basketballgemeinschaft Bierden-Bassen-Achim</p>
+            </div>
+          </div>
+          <p class="officials-text">
+            Du hattest gerade in Ruhe auf der Tribüne Zeit zum Überlegen – auf dem Feld oder am Anschreibertisch bleiben oft nur <strong>0,5 Sekunden</strong> bei vollem Spieltempo. Danke, dass du unsere Unparteiischen und Kampfrichter mit Fairness und Respekt unterstützt!
+          </p>
+          <p class="officials-cta">
+            <strong>Lust, selbst einzusteigen?</strong> Ob Anschreiber/Zeitnehmer am Tisch oder Schiedsrichter-Lehrgang: Sprich uns in der Halle an oder schreib an <a href="mailto:info@bgbiba.net">info@bgbiba.net</a>!
+          </p>
+        </aside>
+
+        <div class="result-actions">
+          <button type="button" id="btn-restart-quiz" class="btn btn-primary btn-large">
+            Noch eine Runde (10 neue Fragen)
+          </button>
+          <button type="button" id="btn-share-result" class="btn btn-secondary">
+            Ergebnis teilen
+          </button>
+        </div>
+
+        <details class="review-details">
+          <summary>Alle 10 Fragen &amp; Erklärungen dieser Runde ansehen</summary>
+          <ol id="review-list" class="review-list"></ol>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-brand">
+        <strong>BG BiBA</strong> – Basketballgemeinschaft Bierden-Bassen-Achim
+      </p>
+      <p class="footer-meta">
+        TSV Bierden von 1928 e.V. · TSV Bassen e.V. · TSV Achim 1860 e.V.
+      </p>
+      <p class="footer-legal">
+        Initiative „Testen statt Meckern“ · Regelreferenz: Offizielle DBB-/FIBA-Basketball-Regeln · Kein Tracking &amp; keine Cookies
+      </p>
+    </div>
+  </footer>
+
+  <script defer src="./js/app.js"></script>
+</body>
+</html>

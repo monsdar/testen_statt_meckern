@@ -43,9 +43,9 @@ e:\Projects\TestenStattMeckern\
 ├── data/
 │   └── questions.json          # Kuratierter Fragenpool (mind. 25–40 Fragen für Abwechslung)
 ├── assets/
-│   ├── bgbiba-full-small.png   # Primärlogo für helle Hintergründe
-│   ├── bgbiba-full-bw.png      # Sekundärlogo für dunkle/blaue Hintergründe
-│   └── favicon.png             # Vereins-Icon (bgbiba_full_tiny)
+│   ├── bgbiba_full_small.png        # Primärlogo für helle Hintergründe
+│   ├── bgbiba_full_black_white.png  # Sekundärlogo für dunkle/blaue Hintergründe
+│   └── bgbiba_full_tiny.png         # Vereins-Icon / Favicon
 ├── dbb_2022/                   # [GITIGNORED] Lokale Referenz: DBB Basketball-Regeln 2022
 ├── fiba_2026/                  # [GITIGNORED] Lokale Referenz: FIBA Official Rules 2026
 ├── .gitignore                  # Schließt dbb_2022/ und fiba_2026/ strikt vom Repo aus
