@@ -101,7 +101,7 @@
       "Technisches Foul wegen Spielverzögerung am Boden"
     ],
     "correctIndex": 0,
-    "explanation": "Es ist ausdrücklich erlaubt, nach dem Ball zu werfen, zu fallen und durch den eigenen Schwung über das Parkett zu rutschen. Erst wenn der liegende Spieler sich mit festgehaltenem Ball herumrollt oder versucht, ohne Dribbling mit dem Ball aufzustehen, wird es zum Schrittfehler.",
+    "explanation": "Es ist ausdrücklich erlaubt, nach dem Ball zu springen, zu fallen und durch den eigenen Schwung über das Parkett zu rutschen. Erst wenn der liegende Spieler sich mit festgehaltenem Ball herumrollt oder versucht, ohne Dribbling mit dem Ball aufzustehen, wird es zum Schrittfehler.",
     "ruleReference": "DBB/FIBA Regel V – Art. 25.2.2 (Spieler fällt, liegt oder sitzt auf dem Spielfeld)"
   },
   {
@@ -448,6 +448,1011 @@
     "correctIndex": 0,
     "explanation": "Goldene Basketballregel: ‚Play until the whistle!' (Spiele bis zum Pfiff!). Artikel 49.1 legt ausdrücklich fest, dass das akustische Signal des Anschreibertischs weder die Uhr anhält noch den Ball tot macht – erst der Pfiff eines Schiedsrichters unterbricht das laufende Spiel.",
     "ruleReference": "DBB/FIBA Regel VIII – Art. 49.1 (Pflichten des Zeitnehmers – Signal)"
+  },
+  {
+    "id": "q-dribble-start-standing",
+    "category": "Schrittfehler & Dribbling",
+    "officialRole": "Schiedsrichter",
+    "question": "Ein Spieler steht nach einem Pass mit beiden Füßen fest an der Dreierlinie, täuscht einen Wurf an und will nun am Verteidiger vorbeidribbeln. Wann darf sich sein Standfuß frühestens vom Boden lösen?",
+    "options": [
+      "Erst nachdem der Ball beim Anprellen seine Hand verlassen hat",
+      "Sobald der Spieler mit dem Oberkörper die Vorwärtsbewegung einleitet",
+      "Gleichzeitig mit dem Anheben des Balls aus der Hüfte",
+      "Erst nachdem der Ball bereits einmal den Hallenboden berührt hat"
+    ],
+    "correctIndex": 0,
+    "explanation": "Der wohl häufigste Schrittfehler in jeder Sporthalle: Beim Start eines Dribblings aus dem Stand muss der Ball die Hand zwingend verlassen haben, ehe sich der Standfuß auch nur einen Millimeter vom Boden hebt. Schiedsrichter schauen beim Antritt deshalb ganz gezielt erst auf die Füße und Hände im selben Augenblick!",
+    "ruleReference": "DBB/FIBA Regel V – Art. 25.2.1 (Beginn eines Dribblings – Standfuß)"
+  },
+  {
+    "id": "q-dribble-start-moving",
+    "category": "Schrittfehler & Dribbling",
+    "officialRole": "Schiedsrichter",
+    "question": "Ein Spieler fängt einen Pass im Lauf, während sein rechter Fuß gerade den Boden berührt (Schritt 0), setzt danach den linken Fuß auf (Schritt 1) und möchte nun dribbeln. Wann muss der Ball seine Hand verlassen haben?",
+    "options": [
+      "Bevor sein rechter Fuß zum zweiten Schritt den Boden berührt",
+      "Noch bevor der linke Fuß beim ersten Schritt den Boden berührt",
+      "Erst nach dem zweiten Schritt, genau wie beim Korbleger",
+      "Ein Dribbling aus dem Lauf heraus ist ohne vorherigen Stopp gar nicht erlaubt"
+    ],
+    "correctIndex": 0,
+    "explanation": "Während man für einen Pass oder Korbwurf zwei Schritte nach dem Fangen in der Bewegung machen darf, gilt für den Start eines Dribblings: Der Ball muss die Hand verlassen haben, BEVOR der Fuß zum zweiten Schritt auf dem Boden aufsetzt!",
+    "ruleReference": "DBB/FIBA Regel V – Art. 25.2.1 (Beginn eines Dribblings in der Bewegung)"
+  },
+  {
+    "id": "q-travel-jump-stop-one-two",
+    "category": "Schrittfehler & Dribbling",
+    "officialRole": "Schiedsrichter",
+    "question": "Ein Spieler beendet sein Dribbling im Lauf, landet für den ersten Schritt auf dem rechten Fuß, springt davon ab und landet für den zweiten Schritt gleichzeitig auf beiden Füßen (‚Jump-Stop'). Welchen Fuß darf er jetzt als Standfuß für einen Sternschritt nutzen?",
+    "options": [
+      "Gar keinen! Nach einem Einsprung von einem Fuß auf beide Füße beim zweiten Schritt ist kein Sternschritt mehr erlaubt",
+      "Er darf sich frei aussuchen, ob links oder rechts sein Standfuß wird",
+      "Den rechten Fuß, weil er damit beim ersten Schritt abgesprungen ist",
+      "Den linken Fuß, weil dieser zuletzt belastet wurde"
+    ],
+    "correctIndex": 0,
+    "explanation": "Eine echte Profi-Regelfalle: Landet ein Spieler beim ersten Schritt auf einem Fuß und beim zweiten Schritt gleichzeitig auf beiden Füßen, hat er seine zwei Schritte bereits verbraucht und besitzt keinen Standfuß mehr. Er darf zwar noch mit beiden Füßen zum Wurf oder Pass hochspringen, aber keinen Fuß mehr für einen Sternschritt versetzen!",
+    "ruleReference": "DBB/FIBA Regel V – Art. 25.2.1 (Schrittfehler – Landung auf beiden Füßen beim 2. Schritt)"
+  },
+  {
+    "id": "q-travel-same-foot-hop",
+    "category": "Schrittfehler & Dribbling",
+    "officialRole": "Schiedsrichter",
+    "question": "Ein Spieler nimmt nach dem Dribbling den Ball auf, landet auf seinem rechten Fuß, drückt sich von diesem rechten Fuß ab und landet direkt wieder auf demselben rechten Fuß, um besser abzustoppen. Ist dieser ‚Hüpfer' auf einem Bein erlaubt?",
+    "options": [
+      "Nein, Schrittfehler! Nach der Ballaufnahme darf man den Boden nicht zweimal nacheinander mit demselben Fuß berühren",
+      "Ja, solange es insgesamt nur zwei Bodenkontakte sind",
+      "Ja, das zählt als erlaubter Euro-Step",
+      "Nur erlaubt, wenn er danach sofort passt und nicht selbst wirft"
+    ],
+    "correctIndex": 0,
+    "explanation": "Zwei Schritte heißen im Basketball immer: ein Fuß und danach der ANDERE Fuß (oder beide gleichzeitig). Zweimal direkt hintereinander mit demselben Fuß aufzukommen – also auf einem Bein zu hüpfen – ist sofort ein Schrittfehler!",
+    "ruleReference": "DBB/FIBA Regel V – Art. 25.2.1 (Schrittfehler – Aufeinanderfolgende Berührung mit demselben Fuß)"
+  },
+  {
+    "id": "q-dribble-carrying-palming",
+    "category": "Schrittfehler & Dribbling",
+    "officialRole": "Schiedsrichter",
+    "question": "Ein Dribbler verzögert sein Tempo, greift dabei mit der Hand von unten unter den Ball, dreht die Handfläche nach oben, sodass der Ball kurz in seiner Hand ruht, und prellt dann weiter. Was pfeift der Schiedsrichter?",
+    "options": [
+      "Regelwidriges Dribbeln (‚Tragen des Balls' / Doppeldribbling), weil der Ball beim Dribbling nicht von unten gehalten oder zur Ruhe gebracht werden darf",
+      "Weiterspielen – solange der Spieler nur eine Hand benutzt, darf er den Ball beliebig halten",
+      "Schrittfehler, weil der Ball zu lange in der Luft war",
+      "Technisches Foul wegen unsportlicher Täuschung"
+    ],
+    "correctIndex": 0,
+    "explanation": "Sobald der Ball während des Dribblings in einer Hand zur Ruhe kommt oder der Spieler mit der Hand unter den Ball greift und ihn trägt (‚Carrying'), gilt das erste Dribbling als beendet. Prellt er danach weiter, ist es ein zweites Dribbling – der Schiedsrichter pfeift ab und rotiert die flache Hand!",
+    "ruleReference": "DBB/FIBA Regel V – Art. 24.1.2 (Dribbling – Tragen des Balls)"
+  },
+  {
+    "id": "q-dribble-off-backboard",
+    "category": "Schrittfehler & Dribbling",
+    "officialRole": "Schiedsrichter",
+    "question": "Ein Spieler hat sein Dribbling bereits beendet und wird eng verteidigt. Er wirft den Ball absichtlich gegen das gegnerische Spielbrett, springt hinterher, fängt ihn wieder und legt ihn in den Korb. Was entscheidet der Schiedsrichter?",
+    "options": [
+      "Der Korb zählt! Den Ball ans Spielbrett zu werfen und wieder zu fangen zählt laut Regelwerk ausdrücklich NICHT als Dribbling",
+      "Pfiff wegen Doppeldribblings (Selbstpass ans Brett ist nur vor dem ersten Dribbling erlaubt)",
+      "Pfiff wegen Schrittfehlers, weil der Ball den Ring nicht berührt hat",
+      "Goaltending durch den Angreifer"
+    ],
+    "correctIndex": 0,
+    "explanation": "Auf der Tribüne sorgt diese spektakuläre Aktion regelmäßig für laute Proteste, aber Artikel 24.1.4 stellt ausdrücklich klar: Den Ball ans Spielbrett zu werfen und danach wieder die Ballkontrolle zu erlangen, zählt NICHT als Dribbling. Solange der Spieler beim Absprung und der Landung keinen Schrittfehler macht, ist der Trick völlig legal!",
+    "ruleReference": "DBB/FIBA Regel V – Art. 24.1.4 (Was nicht als Dribbling zählt – Spielbrett)"
+  },
+  {
+    "id": "q-dribble-after-airball",
+    "category": "Schrittfehler & Dribbling",
+    "officialRole": "Schiedsrichter",
+    "question": "Ein Spieler nimmt einen echten Drei-Punkte-Wurf, doch der Ball verfehlt Ring und Spielbrett komplett (‚Airball'). Der Werfer selbst sprintet hinterher, fängt seinen eigenen Fehlwurf vor der Auslinie und dribbelt sofort wieder los. Darf er das?",
+    "options": [
+      "Ja! Nach einem echten Korbwurfversuch war die Ballkontrolle beendet – der Werfer darf den Ball aufnehmen und neu dribbeln",
+      "Nein, ohne Ringberührung darf der Werfer selbst den Ball überhaupt nicht als Erster berühren",
+      "Nein, er darf den Ball zwar fangen, aber auf keinen Fall ein neues Dribbling starten",
+      "Nein, ein Airball, der vom Werfer gefangen wird, zählt als Selbstpass (Schrittfehler)"
+    ],
+    "correctIndex": 0,
+    "explanation": "Beurteilt der Schiedsrichter den Wurf als ernsthaften Korbwurfversuch (und nicht als getarnten Pass zu sich selbst), endet mit dem Verlassen der Hand die Mannschafts- und Spieler-Ballkontrolle. Deshalb darf auch der Werfer selbst nach einem Airball den Rebound holen und ein neues Dribbling starten!",
+    "ruleReference": "DBB/FIBA Regel IV – Art. 14.1.3 & Regel V – Art. 24.2 (Dribbling nach Korbwurf)"
+  },
+  {
+    "id": "q-dribble-deflected-by-opponent",
+    "category": "Schrittfehler & Dribbling",
+    "officialRole": "Schiedsrichter",
+    "question": "Ein Angreifer hat sein Dribbling bereits beendet und hält den Ball fest. Ein Verteidiger schlägt ihm den Ball aus den Händen, der Ball kullert über den Boden und derselbe Angreifer schnappt ihn sich wieder. Darf er jetzt noch einmal dribbeln?",
+    "options": [
+      "Ja! Weil er die Ballkontrolle durch die Berührung eines Gegenspielers verloren hatte, darf er ein neues Dribbling beginnen",
+      "Nein, er darf den Ball nur noch passen oder direkt auf den Korb werfen",
+      "Nur wenn der Verteidiger den Ball zwischendurch mit beiden Händen festgehalten hat",
+      "Nein, das wäre immer Doppeldribbling"
+    ],
+    "correctIndex": 0,
+    "explanation": "Nach Artikel 24.2 darf ein Spieler genau dann ein zweites Mal dribbeln, wenn er zwischenzeitlich die Ballkontrolle verloren hat, weil ein Gegenspieler den Ball berührt hat. Ein kurzes Wegspitzeln durch den Verteidiger schenkt dem Angreifer also ein komplettes neues Dribbling!",
+    "ruleReference": "DBB/FIBA Regel V – Art. 24.2 (Neues Dribbling nach Gegnerberührung)"
+  },
+  {
+    "id": "q-dribble-tap-rebound",
+    "category": "Schrittfehler & Dribbling",
+    "officialRole": "Schiedsrichter",
+    "question": "Beim Kampf um den Rebound tippt ein Spieler den freien Ball zweimal mit einer Hand vor sich her, um ihn aus dem Getümmel zu befördern, fängt ihn dann mit beiden Händen und beginnt zu dribbeln. Ist das Doppeldribbling?",
+    "options": [
+      "Nein! Versuche, die Ballkontrolle durch Wegtippen in der Nähe anderer Spieler zu erlangen, zählen noch nicht als Dribbling",
+      "Ja, das erste Tippen auf den Boden war bereits sein Dribbling",
+      "Ja, man darf den Ball vor dem Fangen höchstens einmal antippen",
+      "Das ist als Schrittfehler zu pfeifen"
+    ],
+    "correctIndex": 0,
+    "explanation": "Ein Dribbling setzt voraus, dass ein Spieler den Ball bereits unter Kontrolle hat. Tippt er beim Rebound oder im Getümmel den freien Ball erst aus der Reichweite anderer Spieler weg, um überhaupt Kontrolle zu erlangen, zählt das noch nicht als Dribbling!",
+    "ruleReference": "DBB/FIBA Regel V – Art. 24.1.4 (Wegtippen des Balls zur Erlangung der Ballkontrolle)"
+  },
+  {
+    "id": "q-dribble-high-bounce-steps",
+    "category": "Schrittfehler & Dribbling",
+    "officialRole": "Schiedsrichter",
+    "question": "Beim Tempogegenstoß prellt ein schneller Spieler den Ball einmal kräftig weit nach vorne und macht vier schnelle Laufschritte, bevor er den hochspringenden Ball wieder mit der Hand weiterprellt. Ist das ein Schrittfehler?",
+    "options": [
+      "Nein! Während eines laufenden Dribblings gibt es keine Begrenzung der Schrittanzahl, solange der Ball nicht in Kontakt mit der Hand ist",
+      "Ja, pro Prellschlag darf man maximal zwei Schritte machen",
+      "Ja, ab drei Schritten zwischen zwei Prellschlägen ist es Schrittfehler",
+      "Nur in der eigenen Spielfeldhälfte erlaubt"
+    ],
+    "correctIndex": 0,
+    "explanation": "Artikel 24.1.2 sagt klipp und klar: Ein Dribbler darf beliebig viele Schritte machen, während der Ball nicht in Kontakt mit seiner Hand ist. Ob er zwischen zwei Prellschlägen einen Schritt oder fünf Schritte macht, spielt überhaupt keine Rolle – solange er den Ball nicht trägt oder aufnimmt!",
+    "ruleReference": "DBB/FIBA Regel V – Art. 24.1.2 (Schritte während des Dribblings)"
+  },
+  {
+    "id": "q-travel-jump-catch-land-both-feet",
+    "category": "Schrittfehler & Dribbling",
+    "officialRole": "Schiedsrichter",
+    "question": "Ein Spieler fängt einen Pass im Sprung in der Luft und landet anschließend mit beiden Füßen exakt gleichzeitig auf dem Hallenboden. Welcher Fuß ist nun sein Standfuß?",
+    "options": [
+      "Er hat freie Wahl: Sobald er einen der beiden Füße anhebt, wird der andere Fuß auf dem Boden zum Standfuß",
+      "Immer der Fuß, der näher zum Korb steht",
+      "Er darf gar keinen Sternschritt machen, weil er gesprungen ist",
+      "Immer sein starker Sprungfuß"
+    ],
+    "correctIndex": 0,
+    "explanation": "Landet ein Spieler beim Fangen (erster Schritt) gleichzeitig auf beiden Füßen, ist noch kein Standfuß festgelegt. Erst in dem Moment, in dem er einen Fuß vom Boden löst, wird der stehenbleibende Fuß automatisch zum Standfuß!",
+    "ruleReference": "DBB/FIBA Regel V – Art. 25.2.1 (Festlegen des Standfußes nach beidbeiniger Landung)"
+  },
+  {
+    "id": "q-eight-seconds-pass-frontcourt",
+    "category": "Zeitregeln & Wurfuhr",
+    "officialRole": "Schiedsrichter",
+    "question": "Team A steht im Rückfeld unter starkem Druck. Bei Sekunde 7 der 8-Sekunden-Zählung wirft der Aufbauspieler aus dem Rückfeld einen Pass nach vorne, der bei Sekunde 7,5 den Boden im Vorfeld berührt (noch bevor ein Mitspieler ihn fängt). Ist die 8-Sekunden-Regel damit erfüllt?",
+    "options": [
+      "Ja! Sobald der gepasste Ball den Boden im Vorfeld (oder einen Spieler im Vorfeld) berührt, gilt das Vorfeld als erreicht",
+      "Nein, ein Mitspieler muss den Ball vor Ablauf der 8 Sekunden im Vorfeld sicher in den Händen halten",
+      "Nein, der Passgeber selbst hätte mit beiden Füßen über der Mittellinie sein müssen",
+      "Die 8-Sekunden-Zählung stoppt schon, sobald der Ball die Hand des Passgebers im Rückfeld verlässt"
+    ],
+    "correctIndex": 0,
+    "explanation": "Anders als beim Dribbling (wo beide Füße des Dribblers und der Ball im Vorfeld sein müssen) reicht es bei einem Pass völlig aus, dass der Ball im Vorfeld auf dem Boden aufkommt oder dort einen Spieler (oder sogar einen Schiedsrichter im Vorfeld) berührt!",
+    "ruleReference": "DBB/FIBA Regel V – Art. 28.1.2 (Acht Sekunden – Ball im Vorfeld)"
+  },
+  {
+    "id": "q-eight-seconds-continues-out-of-bounds",
+    "category": "Zeitregeln & Wurfuhr",
+    "officialRole": "Schiedsrichter",
+    "question": "Team A dribbelt seit 5 Sekunden im eigenen Rückfeld, als ein Verteidiger den Ball ins Seitenaus spitzelt. Wie viele Sekunden hat Team A nach dem Einwurf im Rückfeld noch Zeit, um den Ball über die Mittellinie ins Vorfeld zu bringen?",
+    "options": [
+      "Nur noch die verbleibenden 3 Sekunden – die 8-Sekunden-Zählung läuft vom Zeitpunkt der Unterbrechung weiter!",
+      "Wieder volle 8 Sekunden, weil das Spiel unterbrochen war",
+      "5 Sekunden wie beim Einwurf",
+      "Gar kein Zeitlimit mehr nach einem Einwurf"
+    ],
+    "correctIndex": 0,
+    "explanation": "Der Schiedsrichter merkt sich den Zählerstand und zeigt beim Einwurf im Rückfeld mit den Fingern sichtbar an, wie viele der 8 Sekunden noch übrig sind. Bei einem Ausball (oder einer Verletzung / Sprungballsituation ohne Ballwechsel) wird die 8-Sekunden-Frist NICHT neu gestartet!",
+    "ruleReference": "DBB/FIBA Regel V – Art. 28.1.3 (Fortsetzung der 8-Sekunden-Periode)"
+  },
+  {
+    "id": "q-shotclock-foul-in-frontcourt-18sec",
+    "category": "Zeitregeln & Wurfuhr",
+    "officialRole": "24-Sekunden-Zeitnehmer",
+    "question": "Team A greift im Vorfeld an, die Wurfuhr zeigt noch 18 Sekunden. Ein Verteidiger begeht ein persönliches Foul am Boden (noch unter der Teamfoulgrenze, also Einwurf im Vorfeld). Was macht der 24-Sekunden-Zeitnehmer mit der Wurfuhr?",
+    "options": [
+      "Er lässt die Wurfuhr bei 18 Sekunden stehen! Bei 14 oder mehr Sekunden Restzeit im Vorfeld wird nicht zurückgesetzt",
+      "Er stellt die Wurfuhr nach jedem Verteidigerfoul auf volle 24 Sekunden zurück",
+      "Er stellt die Wurfuhr von 18 auf 14 Sekunden herunter",
+      "Er addiert pauschal 5 Bonus-Sekunden auf die Wurfuhr"
+    ],
+    "correctIndex": 0,
+    "explanation": "Wichtige Grundregel am Kampfrichtertisch: Bekommt dasselbe Team nach einem Verteidigerfoul im Vorfeld Einwurf und stehen noch 14 Sekunden oder mehr auf der Wurfuhr, läuft die Uhr einfach mit dieser Restzeit (hier 18 Sekunden) weiter!",
+    "ruleReference": "DBB/FIBA Regel V – Art. 29.2.2 & Regel VIII – Art. 50.2 (Wurfuhr im Vorfeld ab 14 Sekunden)"
+  },
+  {
+    "id": "q-shotclock-foul-in-frontcourt-9sec",
+    "category": "Zeitregeln & Wurfuhr",
+    "officialRole": "24-Sekunden-Zeitnehmer",
+    "question": "Team A greift im Vorfeld an, die Wurfuhr zeigt noch 9 Sekunden an. Ein Verteidiger begeht ein persönliches Foul am Boden (noch unter der Teamfoulgrenze, also Einwurf im Vorfeld). Was macht der 24-Sekunden-Zeitnehmer mit der Wurfuhr?",
+    "options": [
+      "Auf 14 Sekunden",
+      "Auf 24 Sekunden",
+      "Sie bleibt bei 9 Sekunden stehen",
+      "Auf 10 Sekunden"
+    ],
+    "correctIndex": 0,
+    "explanation": "Zeigt die Wurfuhr bei einem Verteidigerfoul im Vorfeld 13 Sekunden oder weniger an, wird sie auf 14 Sekunden aufgestockt. Deshalb muss der 24-Sekunden-Zeitnehmer vor jedem Reset blitzschnell prüfen: War das Foul im Rückfeld (→ 24 s) oder im Vorfeld (ab 14 s bleibt es, unter 14 s → 14 s)?",
+    "ruleReference": "DBB/FIBA Regel V – Art. 29.2.2 & Regel VIII – Art. 50.4 (Wurfuhr im Vorfeld unter 14 Sekunden)"
+  },
+  {
+    "id": "q-shotclock-foul-in-backcourt",
+    "category": "Zeitregeln & Wurfuhr",
+    "officialRole": "24-Sekunden-Zeitnehmer",
+    "question": "Ein Aufbauspieler wird beim Ballvortrag noch im eigenen Rückfeld bei 19 Sekunden auf der Wurfuhr von seinem Gegenspieler gefoult (Einwurf im Rückfeld). Was stellt der 24-Sekunden-Zeitnehmer ein?",
+    "options": [
+      "Er setzt die Wurfuhr auf volle 24 Sekunden zurück",
+      "Er lässt die Wurfuhr bei 19 Sekunden stehen",
+      "Er stellt auf 14 Sekunden",
+      "Er zieht die verbrauchten 5 Sekunden in der nächsten Halbzeit ab"
+    ],
+    "correctIndex": 0,
+    "explanation": "Wird das Foul der Verteidigung im Rückfeld der Angreifer gepfiffen, muss das Team den Ball anschließend erst noch über das ganze Feld nach vorne bringen – deshalb gibt es beim Einwurf im Rückfeld nach einem Verteidigerfoul immer volle 24 Sekunden!",
+    "ruleReference": "DBB/FIBA Regel V – Art. 29.2.2 & Regel VIII – Art. 50.3 (Wurfuhr nach Foul im Rückfeld)"
+  },
+  {
+    "id": "q-shotclock-out-of-bounds-no-reset",
+    "category": "Zeitregeln & Wurfuhr",
+    "officialRole": "24-Sekunden-Zeitnehmer",
+    "question": "Bei nur noch 4 Sekunden auf der Wurfuhr will ein Angreifer passen, doch der Verteidiger wehrt den Ball ins Seitenaus ab. Wie viele Sekunden hat die angreifende Mannschaft nach dem Einwurf auf der Wurfuhr?",
+    "options": [
+      "Genau die verbleibenden 4 Sekunden! Ein Ausball durch die Verteidigung setzt die Wurfuhr niemals zurück",
+      "Neue 14 Sekunden, weil der Verteidiger den Ball zuletzt berührt hat",
+      "Neue 24 Sekunden",
+      "Mindestens 5 Sekunden, damit man in Ruhe werfen kann"
+    ],
+    "correctIndex": 0,
+    "explanation": "Gute Verteidigungsarbeit wird belohnt: Schlägt oder lenkt die Verteidigung den Ball ins Aus, bleibt die Wurfuhr exakt bei der Restzeit stehen (hier 4 Sekunden). Der 24-Sekunden-Zeitnehmer darf hier auf keinen Fall auf Reset drücken!",
+    "ruleReference": "DBB/FIBA Regel V – Art. 29.2.2 & Regel VIII – Art. 50.2 (Wurfuhr nach Ausball)"
+  },
+  {
+    "id": "q-shotclock-ball-lodged-on-ring",
+    "category": "Zeitregeln & Wurfuhr",
+    "officialRole": "Schiedsrichter & Kampfgericht",
+    "question": "Ein Korbwurf bleibt direkt zwischen Ring und Spielbrett stecken (‚Klemmer'). Der Einwurfpfeil am Anschreibertisch zeigt in Angriffsrichtung der werfenden Mannschaft. Wie geht es weiter?",
+    "options": [
+      "Einwurf für die angreifende Mannschaft an der Endlinie mit 14 Sekunden auf der Wurfuhr (danach wird der Pfeil gedreht)",
+      "Einwurf für die angreifende Mannschaft mit vollen 24 Sekunden auf der Wurfuhr",
+      "Immer Ballbesitz für die Verteidigung, weil der Wurf feststeckt",
+      "Echter Hochball durch den Schiedsrichter an der Freiwurflinie"
+    ],
+    "correctIndex": 0,
+    "explanation": "Klemmt ein belebter Ball zwischen Ring und Brett fest, ist das eine Sprungballsituation (Wechselnder Ballbesitz). Behält die angreifende Mannschaft durch den Pfeil den Ball, zählt der eingeklemmte Ball als Ringberührung – und für dieselbe Mannschaft gibt es nach Ringberührung 14 Sekunden auf der Wurfuhr!",
+    "ruleReference": "DBB/FIBA Regel IV – Art. 12.4 & Regel VIII – Art. 50.4 (Festgeklemmter Ball am Ring)"
+  },
+  {
+    "id": "q-shotclock-switched-off-under-14s",
+    "category": "Zeitregeln & Wurfuhr",
+    "officialRole": "24-Sekunden-Zeitnehmer",
+    "question": "Im Viertel sind auf der Spieluhr nur noch 11,2 Sekunden übrig. Nach einem Ausball der Verteidigung im Aus bekommt das andere Team neuen Ballbesitz im Vorfeld (wofür es 14 Sekunden Wurfuhr gäbe). Was macht der 24-Sekunden-Zeitnehmer?",
+    "options": [
+      "Er schaltet die Wurfuhr komplett aus (keine Anzeige sichtbar), weil die Restspielzeit im Viertel kürzer als die Wurfuhr-Zeit ist",
+      "Er stellt die Wurfuhr auf 14 Sekunden und lässt sie parallel zur Spieluhr herunterlaufen",
+      "Er stellt die Wurfuhr exakt auf 11,2 Sekunden ein",
+      "Er lässt die Spieluhr auf 14 Sekunden hochstellen"
+    ],
+    "correctIndex": 0,
+    "explanation": "Sobald bei einer neuen Ballkontrolle (oder einem Reset auf 14 Sekunden) weniger Zeit auf der Spieluhr des Viertels übrig ist als auf der Wurfuhr stehen müsste, wird die Wurfuhr dunkel geschaltet – dann zählt bis zur Viertelsirene nur noch die Spieluhr!",
+    "ruleReference": "DBB/FIBA Regel VIII – Art. 50.5 (Ausschalten der Wurfuhr am Viertelende)"
+  },
+  {
+    "id": "q-shotclock-horn-defensive-rebound",
+    "category": "Zeitregeln & Wurfuhr",
+    "officialRole": "Schiedsrichter & Kampfgericht",
+    "question": "Ein Notwurf fliegt Richtung Korb, während die 24-Sekunden-Sirene ertönt. Der Ball verfehlt den Ring komplett, landet aber direkt und völlig unbedrängt in den Händen eines Verteidigers, der sofort zum Gegenangriff loslaufen will. Pfeift der Schiedsrichter ab?",
+    "options": [
+      "Nein, Weiterspielen! Erlangt die Verteidigung sofort und eindeutig die Ballkontrolle, wird das Wurfuhr-Signal ignoriert",
+      "Ja, sobald die 24-Sekunden-Sirene bei einem Airball ertönt, muss immer abgepfiffen und eingeworfen werden",
+      "Ja, es gibt Sprungball wegen abgelaufener Wurfuhr",
+      "Der Verteidiger muss den Ball erst ins Aus werfen, bevor er weiterspielen darf"
+    ],
+    "correctIndex": 0,
+    "explanation": "Eine sehr kluge Regel für den Spielfluss (Art. 29.1.2): Würde der Schiedsrichter hier abpfeifen, würde er die Verteidigung um ihren verdienten Schnellangriff bringen! Deshalb gilt: Hat der Gegner nach dem Fehlwurf sofortige und klare Ballkontrolle, lassen die Schiedsrichter das Spiel einfach weiterlaufen.",
+    "ruleReference": "DBB/FIBA Regel V – Art. 29.1.2 (Wurfuhr-Signal bei klarer Ballkontrolle des Gegners)"
+  },
+  {
+    "id": "q-trent-tucker-0-3-seconds",
+    "category": "Zeitregeln & Wurfuhr",
+    "officialRole": "Schiedsrichter & Kampfgericht",
+    "question": "Es sind nur noch 0,2 Sekunden auf der Spieluhr übrig! Nach dem Einwurf fängt ein Spieler den Ball in den Händen, wirft sofort und trifft. Warum gibt der Schiedsrichter den Korb trotzdem nicht?",
+    "options": [
+      "Weil mindestens 0,3 Sekunden auf der Uhr sein müssen, um einen Ball zu fangen und zu werfen – bei 0,2 oder 0,1 Sekunden zählt nur direktes Tippen oder Dunken!",
+      "Weil in der letzten Sekunde grundsätzlich keine Einwürfe mehr auf den Korb geworfen werden dürfen",
+      "Weil für einen gültigen Wurf mindestens 1,0 Sekunden auf der Uhr sein müssen",
+      "Weil die Spieluhr bei 0,2 Sekunden schon vor dem Einwurf automatisch abläuft"
+    ],
+    "correctIndex": 0,
+    "explanation": "Physikalisch ist es unmöglich, einen Basketball in weniger als 0,3 Sekunden erst zu fangen (kontrollieren) und dann regulär abzuwerfen. Deshalb schreibt Artikel 16.2.5 fest: Bei 0,2 oder 0,1 Sekunden Restzeit kann ein gültiger Korb ausschließlich durch direktes Tippen oder einen direkten Dunking erzielt werden!",
+    "ruleReference": "DBB/FIBA Regel IV – Art. 16.2.5 (0,3-Sekunden-Regel)"
+  },
+  {
+    "id": "q-three-seconds-only-frontcourt",
+    "category": "Zeitregeln & Wurfuhr",
+    "officialRole": "Schiedsrichter",
+    "question": "Während der Aufbauspieler den Ball noch langsam im eigenen Rückfeld nach vorne dribbelt, steht sein Center vorne schon seit 5 Sekunden mitten in der gegnerischen Zone. Warum pfeift der Schiedsrichter noch keine 3 Sekunden?",
+    "options": [
+      "Weil die 3-Sekunden-Regel erst zu zählen beginnt, sobald die angreifende Mannschaft den Ball im VORFFELD kontrolliert",
+      "Weil die 3 Sekunden erst zählen, wenn der Center angespielt wird",
+      "Weil der Schiedsrichter erst nach einem Pass über die Dreierlinie zählen darf",
+      "Weil ein Center einmal pro Viertel bis zu 8 Sekunden in der Zone stehen darf"
+    ],
+    "correctIndex": 0,
+    "explanation": "Solange sich der Ball noch im Rückfeld befindet (oder bei einem Einwurf noch im Aus ist), läuft noch keine 3-Sekunden-Zählung in der Zone! Erst in dem Moment, in dem das Team die Ballkontrolle im Vorfeld hat und die Spieluhr läuft, beginnen die 3 Sekunden zu ticken.",
+    "ruleReference": "DBB/FIBA Regel V – Art. 26.1.1 (Drei Sekunden – Ballkontrolle im Vorfeld)"
+  },
+  {
+    "id": "q-three-seconds-no-defensive-rule",
+    "category": "Zeitregeln & Wurfuhr",
+    "officialRole": "Schiedsrichter",
+    "question": "Ein großer Center der Verteidigung steht den gesamten Angriff über 15 Sekunden lang unter seinem eigenen Korb in der Zone, ohne einen direkten Gegenspieler in Armreichweite zu decken. Ein Zuschauer ruft: „Defensiv 3 Sekunden!“ – Was stimmt?",
+    "options": [
+      "Im DBB- und FIBA-Basketball gibt es KEINE defensive 3-Sekunden-Regel – ein Verteidiger darf beliebig lange in seiner eigenen Zone stehen!",
+      "Es gibt 1 Technischen Freiwurf für den Angriff wegen ‚Defensive 3 Seconds'",
+      "Der Verteidiger darf maximal 5 Sekunden allein in der eigenen Zone stehen",
+      "Der Schiedsrichter muss den Verteidiger verwarnen und aus der Zone schicken"
+    ],
+    "correctIndex": 0,
+    "explanation": "Ein klassischer NBA-Mythos! Die sogenannte ‚Defensive 3-Second Violation' existiert nur in der NBA. Nach offiziellen DBB- und FIBA-Regeln gilt die 3-Sekunden-Regel ausschließlich für die angreifende Mannschaft in der gegnerischen Zone!",
+    "ruleReference": "DBB/FIBA Regel V – Art. 26.1.1 (Drei Sekunden gelten nur in der gegnerischen Zone)"
+  },
+  {
+    "id": "q-midline-belongs-to-backcourt",
+    "category": "Ausball & Rückspiel",
+    "officialRole": "Schiedsrichter",
+    "question": "Ein Angreifer bekommt im Vorfeld den Ball zugepasst und berührt beim Fangen mit der Schuhspitze genau die Mittellinie (ohne den Boden dahinter im Rückfeld zu berühren). Ist das bereits Rückspiel?",
+    "options": [
+      "Ja! Die Mittellinie gehört regeltechnisch zum Rückfeld – wer aus dem Vorfeld auf die Mittellinie tritt, berührt damit das Rückfeld",
+      "Nein, die Mittellinie ist neutraler Boden und gehört zu beiden Feldhälften",
+      "Nein, die Mittellinie gehört immer zum Vorfeld",
+      "Erst wenn der komplette Fuß hinter der Mittellinie aufsetzt, ist es Rückspiel"
+    ],
+    "correctIndex": 0,
+    "explanation": "Artikel 2.5.2 legt eindeutig fest: Die Mittellinie ist Teil des Rückfelds! Hat eine Mannschaft bereits Ballkontrolle im Vorfeld und ein Spieler berührt mit Ball (oder beim Fangen) die Mittellinie, hat er den Ball regelwidrig ins Rückfeld zurückgebracht.",
+    "ruleReference": "DBB/FIBA Regel II – Art. 2.5.2 & Regel V – Art. 30.1.2 (Mittellinie gehört zum Rückfeld)"
+  },
+  {
+    "id": "q-out-of-bounds-back-of-backboard",
+    "category": "Ausball & Rückspiel",
+    "officialRole": "Schiedsrichter",
+    "question": "Ein verunglückter Wurf aus der Ecke streift die Oberkante des Spielbretts, berührt dahinter kurz das Metallgestänge der Korbanlage und fällt zurück ins Spielfeld. Was entscheidet der Schiedsrichter?",
+    "options": [
+      "Pfiff und Ausball! Die Rückseite des Spielbretts und die Korbstützen gehören zum Aus (die Kanten des Bretts selbst wären noch im Spiel)",
+      "Weiterspielen – die gesamte Korbanlage inklusive Halterung gehört zum Spielfeld",
+      "Weiterspielen, solange der Ball danach nicht den Boden im Aus berührt",
+      "Sprungball (Wechselnder Ballbesitz)"
+    ],
+    "correctIndex": 0,
+    "explanation": "Hier zählt jeder Zentimeter: Die Vorderseite sowie die obere, untere und seitlichen Kanten des Spielbretts sind im Spiel (geht ein Wurf über die Oberkante rein, zählt er sogar!). Aber sobald der Ball die Rückseite des Spielbretts oder die Halterung/Korbstütze berührt, ist er sofort im Aus!",
+    "ruleReference": "DBB/FIBA Regel V – Art. 23.1.2 (Ball im Aus – Rückseite des Spielbretts & Korbstützen)"
+  },
+  {
+    "id": "q-out-of-bounds-ceiling-object",
+    "category": "Ausball & Rückspiel",
+    "officialRole": "Schiedsrichter",
+    "question": "In einer niedrigen Schulsporthalle streift ein hoher Bogenpass mitten über dem Spielfeld ein unter der Decke hängendes Klettertau. Was gilt?",
+    "options": [
+      "Sofortiger Pfiff und Ausball! Berührt der Ball irgendeinen Gegenstand oberhalb des Spielfelds, ist er im Aus",
+      "Weiterspielen, solange der Ball danach wieder im Feld landet",
+      "Wiederholung des Angriffs durch Schiedsrichterball",
+      "Nur Ausball, wenn der Ball direkt an der Hallendecke stecken bleibt"
+    ],
+    "correctIndex": 0,
+    "explanation": "Alles, was sich oberhalb des Spielfelds befindet – Hallendecke, Lampen, Lautsprecher, Seile oder eingeklappte Seitenkörbe – gilt als Aus. Berührt der Ball ein solches Hindernis, bekommt die gegnerische Mannschaft Einwurf an der Seitenlinie nächst der Stelle!",
+    "ruleReference": "DBB/FIBA Regel V – Art. 23.1.2 (Ball berührt Gegenstand oberhalb des Spielfelds)"
+  },
+  {
+    "id": "q-out-of-bounds-touching-player-outside",
+    "category": "Ausball & Rückspiel",
+    "officialRole": "Schiedsrichter",
+    "question": "Ein Dribbler steht mit beiden Füßen sauber im Spielfeld, stützt sich aber im Zweikampf kurz mit der freien Schulter an einem Gegenspieler ab, der mit einem Fuß im Aus steht (der Ball berührt den Gegenspieler nicht). Ist der Dribbler dadurch im Aus?",
+    "options": [
+      "Nein, Weiterspielen! Das bloße Berühren eines anderen Spielers, der im Aus steht, macht den Dribbler nicht selbst zum Spieler im Aus",
+      "Ja, durch den Körperkontakt überträgt sich das Aus sofort auf den Dribbler",
+      "Ja, sobald irgendein Spieler im Aus berührt wird, ist das Spiel unterbrochen",
+      "Es gibt automatisch Halteball"
+    ],
+    "correctIndex": 0,
+    "explanation": "Feines Detail in Artikel 23.1.1: Ein Spieler ist im Aus, wenn er den Boden oder einen Gegenstand im Aus berührt – ‚abgesehen von einem anderen Spieler'! Solange der Ball selbst den im Aus stehenden Spieler nicht berührt, läuft das Spiel weiter.",
+    "ruleReference": "DBB/FIBA Regel V – Art. 23.1.1 (Spieler im Aus – Ausnahme bei Kontakt mit anderem Spieler)"
+  },
+  {
+    "id": "q-throw-in-hits-rim-directly",
+    "category": "Ausball & Rückspiel",
+    "officialRole": "Schiedsrichter",
+    "question": "Ein Spieler wirft den Ball beim Einwurf als hohen Lob Richtung Korb. Kein Spieler berührt den Ball in der Luft und er fällt direkt durch das Netz. Zählt dieser Treffer?",
+    "options": [
+      "Nein! Ein Einwurf darf niemals direkt in den Korb gehen – es ist eine Regelübertretung und der Gegner bekommt Einwurf auf Höhe der Freiwurflinie",
+      "Ja, er zählt 2 Punkte (bzw. 3 Punkte von hinter der Dreierlinie)",
+      "Nein, der Korb zählt nicht, aber das Spiel läuft mit dem Rebound einfach weiter",
+      "Der Einwurf wird einfach wiederholt"
+    ],
+    "correctIndex": 0,
+    "explanation": "Ein Einwurf ist erst beendet, wenn der Ball einen Spieler auf dem Spielfeld berührt hat. Fällt der Ball direkt aus dem Einwurf in den Korb, zählt der Treffer nicht und die andere Mannschaft erhält Einwurf an der Seitenlinie in Höhe der Freiwurflinie!",
+    "ruleReference": "DBB/FIBA Regel IV – Art. 17.2.9 & Art. 17.3.1 (Einwurf direkt in den Korb)"
+  },
+  {
+    "id": "q-throw-in-behind-backboard",
+    "category": "Ausball & Rückspiel",
+    "officialRole": "Schiedsrichter",
+    "question": "Direkt unter dem Korb blockt ein Verteidiger den Ball über die Endlinie ins Aus. Wo lässt der Schiedsrichter den anschließenden Einwurf ausführen?",
+    "options": [
+      "An der Endlinie direkt neben der Zone (Freiwurfraum) – niemals direkt hinter dem Spielbrett!",
+      "Exakt unter dem Korb direkt hinter dem Spielbrett, wo der Ball ins Aus flog",
+      "Immer draußen an der Drei-Punkte-Ecke",
+      "An der Seitenlinie auf Höhe der Freiwurflinie"
+    ],
+    "correctIndex": 0,
+    "explanation": "Damit der Einwerfer nicht das Spielbrett und die Korbstütze direkt vor der Nase hat, gilt bei allen Ausbällen und Regelübertretungen die Ausnahme: Einwürfe finden nächst der Stelle der Übertretung statt, ‚ausgenommen direkt hinter dem Spielbrett' (also seitlich außerhalb der Zone)!",
+    "ruleReference": "DBB/FIBA Regel IV – Art. 17.2.2 & Regel V – Art. 22.2 (Kein Einwurf direkt hinter dem Spielbrett)"
+  },
+  {
+    "id": "q-throw-in-last-2min-warning",
+    "category": "Ausball & Rückspiel",
+    "officialRole": "Schiedsrichter",
+    "question": "In den letzten 2:00 Minuten des 4. Viertels zeigt der Schiedsrichter vor dem Einwurf eine warnende Armbewegung entlang der Grenzlinie. Trotzdem hält der Verteidiger seine Hände über die Linie ins Aus, um den Passweg beim Einwurf zu blockieren. Was folgt?",
+    "options": [
+      "Sofort ein Technisches Foul gegen den Verteidiger (1 Freiwurf für den Angriff + der Angriff behält den Einwurf!)",
+      "Nur eine mündliche Ermahnung und Wiederholung des Einwurfs",
+      "Ein normales persönliches Foul gegen den Verteidiger",
+      "Das Überstrecken der Linie mit den Händen in der Luft ist beim Einwurf immer erlaubt"
+    ],
+    "correctIndex": 0,
+    "explanation": "Solange der Ball beim Einwurf die Grenzlinie noch nicht überquert hat, gehört der Luftraum über und hinter der Linie dem Einwerfer. In den letzten 2:00 Minuten des 4. Viertels (und in der Verlängerung) warnt der Schiedsrichter vorab per Handzeichen – greift der Verteidiger dann trotzdem über die Linie, gibt es sofort ein Technisches Foul!",
+    "ruleReference": "DBB/FIBA Regel IV – Art. 17.3.2 & Art. 17.3.3 (Übertreten der Einwurflinie in den letzten 2 Minuten)"
+  },
+  {
+    "id": "q-throw-in-narrow-hall-1m",
+    "category": "Ausball & Rückspiel",
+    "officialRole": "Schiedsrichter",
+    "question": "In vielen engen Sporthallen ist zwischen der Seitenlinie und der Hallenwand weniger als 2 Meter Platz. Welchen Mindestabstand muss der Verteidiger dort zum Einwerfer einhalten?",
+    "options": [
+      "Mindestens 1 Meter Abstand zum Einwerfer",
+      "Gar keinen Abstand – er darf direkt an der Innenkante der Seitenlinie stehen",
+      "Mindestens 3 Meter Abstand",
+      "Er muss hinter der Drei-Punkte-Linie warten"
+    ],
+    "correctIndex": 0,
+    "explanation": "Gerade in kleineren Hallen extrem wichtig: Wenn hinter der Grenzlinie weniger als 2 Meter freier Auslauf bis zur Wand, Tribüne oder Matte vorhanden sind, darf sich kein Spieler (weder Verteidiger noch Mitspieler) näher als 1 Meter zum Einwerfer stellen!",
+    "ruleReference": "DBB/FIBA Regel IV – Art. 17.3.2 (Mindestabstand beim Einwurf in engen Hallen)"
+  },
+  {
+    "id": "q-backcourt-throw-in-midline-start",
+    "category": "Ausball & Rückspiel",
+    "officialRole": "Schiedsrichter",
+    "question": "Zu Beginn des 2., 3. oder 4. Viertels steht der Einwerfer mit je einem Fuß links und rechts der verlängerten Mittellinie gegenüber dem Anschreibertisch. In welche Spielfeldhälfte darf er den Ball einwerfen?",
+    "options": [
+      "An jede beliebige Stelle des Spielfelds – sowohl ins Vorfeld als auch ins eigene Rückfeld!",
+      "Ausschließlich nach vorne ins Vorfeld, sonst ist es sofort Rückspiel",
+      "Ausschließlich zurück ins eigene Rückfeld",
+      "Nur innerhalb des Mittelkreises"
+    ],
+    "correctIndex": 0,
+    "explanation": "Weil die Mannschaft beim Viertel-Einwurf an der Mittellinie noch gar keine Ballkontrolle im Vorfeld hatte, greift hier keine Rückspielregel: Der Einwerfer steht rittlings an der verlängerten Mittellinie und hat die freie Wahl, ob er ins Vorfeld oder sicher zurück ins Rückfeld passt!",
+    "ruleReference": "DBB/FIBA Regel IV – Art. 17.2.3 (Einwurf an der Mittellinie zu Viertelbeginn)"
+  },
+  {
+    "id": "q-backcourt-deflected-by-defender",
+    "category": "Ausball & Rückspiel",
+    "officialRole": "Schiedsrichter",
+    "question": "Team A greift im Vorfeld an. Ein Pass wird von den Fingerspitzen eines Verteidigers von Team B abgefälscht, sodass der Ball über die Mittellinie zurück ins Rückfeld von Team A rollt. Darf ein Spieler von Team A den Ball dort aufnehmen?",
+    "options": [
+      "Ja, Weiterspielen! Weil ein Verteidiger den Ball zuletzt im Vorfeld berührt hat, ist es KEIN Rückspiel",
+      "Nein, Rückspiel – sobald ein Angreifer den Ball im Rückfeld berührt, wird abgepfiffen",
+      "Nur wenn der Ball vorher im Rückfeld noch nicht den Boden berührt hat",
+      "Team A darf den Ball aufnehmen, bekommt aber nur 8 Sekunden auf der Wurfuhr"
+    ],
+    "correctIndex": 0,
+    "explanation": "Für ein strafbares Rückspiel (Art. 30.1.2) muss ein Spieler der angreifenden Mannschaft den Ball als LETZTER im Vorfeld berührt haben. Wurde der Ball dagegen vom Verteidiger ins Rückfeld getippt oder abgefälscht, darf der Angriff ihn dort völlig legal sichern!",
+    "ruleReference": "DBB/FIBA Regel V – Art. 30.1.2 (Spielen des Balls ins Rückfeld – letzte Berührung)"
+  },
+  {
+    "id": "q-no-charge-semicircle",
+    "category": "Fouls & Kontakt",
+    "officialRole": "Schiedsrichter",
+    "question": "Ein Angreifer zieht mit Ball zum Korb, springt vor dem kleinen Halbkreis unter dem Korb ab und prallt in der Luft auf den Oberkörper eines Verteidigers, der mit einer Ferse AUF der Linie dieses No-Charge-Halbkreises steht. Pfeift der Schiedsrichter Stürmerfoul?",
+    "options": [
+      "Nein! Die Linie gehört zum No-Charge-Halbkreis – steht der Verteidiger darauf oder darin, wird gegen den hineinspringenden Werfer kein Stürmerfoul gepfiffen",
+      "Ja, klares Offensivfoul (Charging), weil der Verteidiger rechtzeitig stand",
+      "Ja, weil die Linie noch nicht zum No-Charge-Halbkreis gehört",
+      "Es gibt immer Sprungball, wenn ein Kontakt im Halbkreis stattfindet"
+    ],
+    "correctIndex": 0,
+    "explanation": "Der No-Charge-Halbkreis (Radius 1,30 m unter dem Korb) verhindert, dass Verteidiger sich direkt unter dem Ring nur hinstellen, um gefährliche Stürmerfouls gegen heranspringende Korbleger-Schützen zu ziehen. Und wichtig: Die Halbkreislinie gehört bereits zum No-Charge-Bereich!",
+    "ruleReference": "DBB/FIBA Regel II – Art. 2.5.7 & Regel VI – Art. 33.10 (No-Charge-Halbkreisbereich)"
+  },
+  {
+    "id": "q-screening-blind-spot-distance",
+    "category": "Fouls & Kontakt",
+    "officialRole": "Schiedsrichter",
+    "question": "Ein Angreifer stellt einem stehenden Verteidiger von hinten – also außerhalb seines Blickfelds – einen Block (Screen). Wie viel Abstand muss der Blocksteller dabei mindestens lassen?",
+    "options": [
+      "Mindestens 1 normalen Schritt Abstand, damit der Verteidiger sich umdrehen oder einen Schritt machen kann, ohne sofort aufzuprallen",
+      "Gar keinen Abstand – man darf sich auch im Rücken direkt Press an Press hinstellen",
+      "Mindestens 3 Meter Abstand",
+      "Blöcke im Rücken eines Spielers sind im Basketball grundsätzlich verboten"
+    ],
+    "correctIndex": 0,
+    "explanation": "Sieht der Verteidiger den Block kommen (im direkten Gesichtsfeld), darf der Blocksteller so nah stehen, wie er will (ohne Kontakt). Stellt er den Block aber im toten Winkel (außerhalb des Gesichtsfelds), muss er dem stehenden Gegner zwingend 1 normalen Schritt (bei einem sich bewegenden Gegner 1 bis 2 Schritte) Raum lassen!",
+    "ruleReference": "DBB/FIBA Regel VI – Art. 33.7 (Legales und regelwidriges Stellen eines Blocks)"
+  },
+  {
+    "id": "q-screening-moving-player",
+    "category": "Fouls & Kontakt",
+    "officialRole": "Schiedsrichter",
+    "question": "Ein Center will seinem Aufbauspieler den Weg freiblocken, läuft aber beim Kontakt noch einen halben Schritt mit und schiebt die Hüfte in den Laufweg des Verteidigers. Was pfeift der Schiedsrichter?",
+    "options": [
+      "Offensivfoul wegen regelwidrigen Blocks (‚Moving Screen') – beim Kontakt muss der Blocksteller mit beiden Füßen fest am Boden stehen",
+      "Verteidigerfoul, weil der Verteidiger in den Block gelaufen ist",
+      "Weiterspielen, solange der Blocksteller die Hände vor dem Körper verschränkt hat",
+      "Technisches Foul wegen Unsportlichkeit"
+    ],
+    "correctIndex": 0,
+    "explanation": "Auch mit vorbildlich angelegten Händen gilt: Ein Block ist nur dann legal, wenn der Blocksteller im Moment des Kontakts bereits innerhalb seines Zylinders stillstand und beide Füße auf dem Boden hatte. Wer sich beim Blocken noch mitbewegt, begeht ein Offensivfoul!",
+    "ruleReference": "DBB/FIBA Regel VI – Art. 33.7 & Art. 33.9 (Regelwidriger Block / Blockieren)"
+  },
+  {
+    "id": "q-fouled-on-3pt-shot-missed",
+    "category": "Fouls & Kontakt",
+    "officialRole": "Schiedsrichter",
+    "question": "Ein Spieler wirft von jenseits der Drei-Punkte-Linie auf den Korb, wird während der Wurfbewegung am Arm gefoult und der Ball springt vom Ring wieder heraus. Wie lautet die Strafe?",
+    "options": [
+      "3 Freiwürfe für den gefoulten Werfer",
+      "2 Freiwürfe + Einwurf an der Dreierlinie",
+      "Immer nur 2 Freiwürfe, egal von wo geworfen wurde",
+      "1 Freiwurf + neuer Angriff mit 24 Sekunden"
+    ],
+    "correctIndex": 0,
+    "explanation": "Wird ein Spieler in der Korbwurfaktion aus dem Drei-Punkte-Bereich gefoult und der Wurf geht daneben, erhält er genau so viele Freiwürfe, wie der Wurf Punkte gebracht hätte: nämlich 3 Freiwürfe!",
+    "ruleReference": "DBB/FIBA Regel VI – Art. 34.2.2 (Persönliches Foul am Korbwerfer)"
+  },
+  {
+    "id": "q-fouled-on-shot-and-one",
+    "category": "Fouls & Kontakt",
+    "officialRole": "Schiedsrichter",
+    "question": "Beim Korbleger hat der Angreifer den Ball bereits in den Händen aufgenommen, als er vom Verteidiger gefoult wird. Er vollendet den Wurf in einer fließenden Bewegung und der Ball fällt in den Korb! Was entscheidet der Schiedsrichter?",
+    "options": [
+      "Die 2 Punkte zählen UND der Werfer bekommt zusätzlich 1 Bonus-Freiwurf (‚And One')",
+      "Der Korb zählt nicht, weil der Pfiff schon vor dem Abwurf ertönte – es gibt nur 2 Freiwürfe",
+      "Die 2 Punkte zählen, aber damit ist das Foul abgegolten (kein Freiwurf)",
+      "Der Werfer darf wählen: entweder die 2 Punkte oder 3 Freiwürfe"
+    ],
+    "correctIndex": 0,
+    "explanation": "Solange sich der Spieler im Moment des Fouls bereits in der kontinuierlichen Korbwurfbewegung befand, wird der Ball durch den Pfiff noch nicht tot! Geht der Wurf rein, zeigt der Schiedsrichter zwei Finger nach unten (Korb zählt) und anschließend einen Finger hoch für den Bonus-Freiwurf.",
+    "ruleReference": "DBB/FIBA Regel IV – Art. 10.4, Art. 15.1.3 & Regel VI – Art. 34.2.2 (Erfolgreicher Korbwurf mit Foul)"
+  },
+  {
+    "id": "q-fouled-in-shooting-motion-passes-off",
+    "category": "Fouls & Kontakt",
+    "officialRole": "Schiedsrichter",
+    "question": "Ein Spieler setzt zum Korbleger an und wird beim Absprung gefoult. In der Luft entscheidet er sich aber noch um und passt den Ball nach außen zu einem freien Mitspieler. Bekommt der gefoulte Spieler jetzt Wurf-Freiwürfe?",
+    "options": [
+      "Nein! Wer nach dem Foul den Ball noch abpasst, befindet sich regeltechnisch nicht mehr in der Korbwurfaktion – es gibt nur Einwurf (sofern noch keine Teamfoulgrenze erreicht ist)",
+      "Ja, 2 Freiwürfe, weil er beim Pfiff eigentlich werfen wollte",
+      "Der Mitspieler draußen darf den Dreier noch werfen und der Treffer zählt",
+      "Es gibt 1 Freiwurf wegen Vorteilsnahme"
+    ],
+    "correctIndex": 0,
+    "explanation": "Artikel 15.1.6 ist hier eindeutig: Wird ein Spieler während seiner Korbwurfaktion gefoult und passt er den Ball nach dem Foul ab, gilt die Bewegung NICHT mehr als Korbwurfaktion! Es wird dann als normales Foul am Boden gewertet.",
+    "ruleReference": "DBB/FIBA Regel IV – Art. 15.1.6 (Passen nach Foul in der Korbwurfaktion)"
+  },
+  {
+    "id": "q-double-foul-possession",
+    "category": "Fouls & Kontakt",
+    "officialRole": "Schiedsrichter & Kampfgericht",
+    "question": "Während Team A den Ball im Angriff dribbelt, stoßen sich abseits des Balls zwei Gegenspieler gleichzeitig weg. Der Schiedsrichter pfeift ein ‚Doppelfoul' (gekreuzte Fäuste über dem Kopf), obwohl beide Teams schon 5 Mannschaftsfouls haben. Wer wirft jetzt Freiwürfe?",
+    "options": [
+      "Niemand! Bei einem Doppelfoul bekommen beide Spieler zwar je ein Foul angeschrieben, es gibt aber nie Freiwürfe – Team A behält per Einwurf den Ball",
+      "Beide Spieler werfen nacheinander je 2 Freiwürfe auf ihren Korb",
+      "Es gibt Sprungball am Mittelkreis",
+      "Nur die verteidigende Mannschaft bekommt 2 Freiwürfe"
+    ],
+    "correctIndex": 0,
+    "explanation": "Bei einem Doppelfoul (zwei Gegenspieler foulen sich nahezu gleichzeitig gegenseitig) heben sich die Strafen auf, selbst wenn beide Teams über der Mannschaftsfoulgrenze sind: Jedes Foul wird auf dem Anschreibebogen notiert, Freiwürfe gibt es keine, und das Team in Ballkontrolle setzt seinen Angriff mit der Restzeit auf der Wurfuhr fort!",
+    "ruleReference": "DBB/FIBA Regel VI – Art. 35.1 & Art. 35.2 (Doppelfoul)"
+  },
+  {
+    "id": "q-throw-in-foul-last-2-minutes",
+    "category": "Fouls & Kontakt",
+    "officialRole": "Schiedsrichter & Kampfgericht",
+    "question": "Noch 40 Sekunden im 4. Viertel: Der Ball ist noch beim Einwerfer im Aus, als ein Verteidiger auf dem Feld seinen Gegenspieler umklammert, damit dieser keinen Pass empfangen kann. Team B hat erst 2 Mannschaftsfouls. Was ist die Strafe für dieses ‚Einwurffoul'?",
+    "options": [
+      "1 Freiwurf für den gefoulten Spieler UND anschließend Einwurf für dessen Mannschaft (unabhängig von den Mannschaftsfouls!)",
+      "Nur Wiederholung des Einwurfs, weil noch keine 5 Mannschaftsfouls erreicht sind",
+      "2 Freiwürfe ohne anschließenden Ballbesitz",
+      "Disqualifikation des Verteidigers"
+    ],
+    "correctIndex": 0,
+    "explanation": "In den letzten 2:00 Minuten des 4. Viertels (und in jeder Verlängerung) wird jedes persönliche Verteidigerfoul auf dem Feld, während der Ball noch zum Einwurf im Aus ist, als ‚Einwurffoul' bestraft: Es gibt sofort 1 Freiwurf plus Einwurf für dasselbe Team!",
+    "ruleReference": "DBB/FIBA Regel VI – Art. 34.1.2 & Art. 34.2.3 (Einwurffoul in den letzten 2 Minuten)"
+  },
+  {
+    "id": "q-guarding-from-behind",
+    "category": "Fouls & Kontakt",
+    "officialRole": "Schiedsrichter",
+    "question": "Ein geschlagener Verteidiger läuft hinter dem Dribbler her, greift von hinten über dessen Schulter nach dem Ball und drückt dabei mit der Brust in den Rücken des Angreifers. Der Verteidiger protestiert: „Ich hab doch den Ball getroffen!“ – Was gilt?",
+    "options": [
+      "Foul! Der Versuch, den Ball zu spielen, berechtigt einen Verteidiger niemals dazu, von hinten Körperkontakt am Gegenspieler zu verursachen",
+      "Kein Foul – wie beim Grätschen im Fußball zählt nur, ob zuerst der Ball berührt wurde",
+      "Immer Sprungball, wenn Ball und Körper gleichzeitig berührt werden",
+      "Offensivfoul, weil der Dribbler plötzlich abgebremst hat"
+    ],
+    "correctIndex": 0,
+    "explanation": "Artikel 33.13 (‚Regelwidriges Verteidigen von hinten') steht fast wörtlich so im Regelbuch: Der Versuch des Verteidigers, den Ball zu spielen, rechtfertigt keinen persönlichen Kontakt im Rücken des Gegenspielers!",
+    "ruleReference": "DBB/FIBA Regel VI – Art. 33.13 (Regelwidriges Verteidigen von hinten)"
+  },
+  {
+    "id": "q-offensive-push-off-chicken-wing",
+    "category": "Fouls & Kontakt",
+    "officialRole": "Schiedsrichter",
+    "question": "Beim Zug zum Korb fährt der Dribbler seinen freien, nicht dribbelnden Unterarm aus und stößt den seitlich mitlaufenden Verteidiger weg, um Platz für seinen Wurf zu schaffen. Was pfeift der Schiedsrichter?",
+    "options": [
+      "Offensivfoul! Auch der Angreifer darf seinen Verteidiger nicht mit dem freien Arm oder Ellbogen wegstoßen (‚Push-off')",
+      "Weiterspielen – der Angreifer darf den freien Arm als Schutzschild beliebig einsetzen",
+      "Verteidigerfoul, weil der Verteidiger zu nah am Dribbler war",
+      "Schrittfehler durch den Armeinsatz"
+    ],
+    "correctIndex": 0,
+    "explanation": "Das Zylinderprinzip gilt für beide Seiten: Streckt der Dribbler seinen freien Arm oder Ellbogen außerhalb seines Zylinders aus, um den Verteidiger wegzudrücken (‚Push-off') oder sich bei ihm einzuhaken (‚Hooking'), ist das ein klares Offensivfoul!",
+    "ruleReference": "DBB/FIBA Regel VI – Art. 33.11 (Kontakt mit Händen/Armen durch Angreifer)"
+  },
+  {
+    "id": "q-fighting-leaving-bench",
+    "category": "Fouls & Kontakt",
+    "officialRole": "Schiedsrichter & Kampfgericht",
+    "question": "Auf dem Spielfeld kommt es zu einer handfesten Rudelbildung. Drei Ersatzspieler springen von der Bank auf und laufen aufs Feld, um ihre Mitspieler festzuhalten und zu schlichten. Was schreibt das Regelwerk zwingend vor?",
+    "options": [
+      "Alle drei Ersatzspieler müssen zwingend disqualifiziert werden! Nur der Trainer und der 1. Trainer-Assistent dürfen die Bank verlassen, um beim Schlichten zu helfen",
+      "Keine Strafe, solange die Ersatzspieler nachweislich nur schlichten wollten",
+      "Nur eine mündliche Verwarnung für die Ersatzspieler",
+      "Jeder Ersatzspieler bekommt ein normales persönliches Foul"
+    ],
+    "correctIndex": 0,
+    "explanation": "Eine der strengsten Regeln im Basketball (Art. 39): Damit eine Rangelei auf dem Feld niemals in eine Massenschlägerei ausartet, ist das Betreten des Spielfelds für Bankspieler strikt verboten – selbst in friedlicher Absicht! Nur Cheftrainer und Co-Trainer dürfen den Schiedsrichtern beim Trennen helfen.",
+    "ruleReference": "DBB/FIBA Regel VI – Art. 39.2 (Gewalttätigkeit – Verlassen des Mannschaftsbank-Bereichs)"
+  },
+  {
+    "id": "q-timeouts-count-halves-last2min",
+    "category": "Kampfgericht & Anschreiber",
+    "officialRole": "Kampfgericht / Anschreiber",
+    "question": "Ein Trainer hat in der gesamten 2. Halbzeit noch keine einzige seiner 3 Auszeiten genutzt. Als die Spieluhr im 4. Viertel auf 2:00 Minuten springt, zieht der Anschreiber plötzlich zwei Striche durch das erste Auszeit-Kästchen. Warum?",
+    "options": [
+      "Weil von den 3 Auszeiten der 2. Halbzeit maximal 2 in den letzten 2:00 Minuten des 4. Viertels genommen werden dürfen – eine nicht vorher genutzte 3. Auszeit verfällt!",
+      "Weil in den letzten 2 Minuten überhaupt keine Auszeiten mehr erlaubt sind",
+      "Weil die ungenutzte Auszeit automatisch für eine eventuelle Verlängerung gutgeschrieben wird",
+      "Weil ein Team pro Viertel immer nur 1 Auszeit nehmen darf"
+    ],
+    "correctIndex": 0,
+    "explanation": "Jedes Team hat 2 Auszeiten in der 1. Halbzeit und 3 Auszeiten in der 2. Halbzeit. Aber Achtung: In den letzten 2:00 Minuten des 4. Viertels stehen maximal noch 2 Auszeiten zur Verfügung. Hat ein Trainer bis zur 2:00-Marke noch gar keine Auszeit in Hälfte zwei genommen, muss der Anschreiber das erste Kästchen entwerten!",
+    "ruleReference": "DBB/FIBA Regel IV – Art. 18.2.5, Art. 18.2.6 & Anhang B – B.7.2 (Auszeiten in den letzten 2 Minuten)"
+  },
+  {
+    "id": "q-timeout-duration-50sec-horn",
+    "category": "Kampfgericht & Anschreiber",
+    "officialRole": "Kampfgericht / Anschreiber",
+    "question": "Eine reguläre Auszeit dauert im Basketball genau 60 Sekunden (1 Minute). Warum lässt der Zeitnehmer am Kampfrichtertisch seine Sirene aber schon nach 50 Sekunden das erste Mal ertönen?",
+    "options": [
+      "Als offizielles 10-Sekunden-Warnsignal, damit der Schiedsrichter pfeift und die Teams sich sofort wieder spielbereit aufs Feld begeben",
+      "Weil eine Auszeit in Wahrheit nur 50 Sekunden dauert",
+      "Damit die Trainer wissen, dass sie jetzt noch wechseln dürfen",
+      "Aus Versehen – das Signal darf erst bei 60 Sekunden ertönen"
+    ],
+    "correctIndex": 0,
+    "explanation": "Damit das Spiel nach einer Minute sofort weitergehen kann, stoppt der Zeitnehmer die Auszeit exakt: Bei 50 Sekunden gibt er das Warnsignal (10 Sekunden Restzeit, Schiedsrichter bittet die Teams aufs Parkett) und bei 60 Sekunden das Schlusssignal zum Ende der Auszeit!",
+    "ruleReference": "DBB/FIBA Regel IV – Art. 18.2.1 & Regel VIII – Art. 49.3 (Messen einer Auszeit)"
+  },
+  {
+    "id": "q-game-clock-stops-last-2min-basket",
+    "category": "Kampfgericht & Anschreiber",
+    "officialRole": "Kampfgericht / Anschreiber",
+    "question": "Während des normalen Spielverlaufs läuft die Spieluhr nach einem erzielten Feldkorb einfach weiter. In welcher Spielphase muss der Zeitnehmer die Spieluhr nach jedem erfolgreichen Korb sofort anhalten?",
+    "options": [
+      "In den letzten 2:00 Minuten des 4. Viertels und in den letzten 2:00 Minuten jeder Verlängerung",
+      "In den letzten 2:00 Minuten jedes einzelnen Viertels",
+      "Immer nach jedem Drei-Punkte-Treffer",
+      "Die Spieluhr wird nach regulären Körben niemals angehalten"
+    ],
+    "correctIndex": 0,
+    "explanation": "Damit die führende Mannschaft in einer spannenden Schlussphase beim Einwurf nach einem Gegentreffer keine wertvollen Sekunden von der Uhr schleichen lassen kann, stoppt der Zeitnehmer in den letzten 2:00 Minuten des 4. Viertels (und jeder Verlängerung) bei jedem Korberfolg sofort die Spieluhr!",
+    "ruleReference": "DBB/FIBA Regel VIII – Art. 49.2 (Stoppen der Spieluhr in den letzten 2 Minuten)"
+  },
+  {
+    "id": "q-game-clock-when-starts-throw-in",
+    "category": "Kampfgericht & Anschreiber",
+    "officialRole": "Kampfgericht / Anschreiber",
+    "question": "Ein Spieler führt an der Seitenlinie einen Einwurf aus. In welchem exakten Moment drückt der Zeitnehmer am Tisch auf ‚Start' für die Spieluhr?",
+    "options": [
+      "Erst in dem Moment, in dem der eingeworfene Ball auf dem Spielfeld den ersten Spieler berührt",
+      "Sobald der Schiedsrichter dem Einwerfer den Ball übergibt",
+      "Sobald der Ball beim Einwurf die Hände des Einwerfers verlässt",
+      "Sobald der Ball in der Luft die Seitenlinie überquert"
+    ],
+    "correctIndex": 0,
+    "explanation": "Hier ist perfektes Timing am Kampfrichtertisch gefragt: Während der Ball vom Einwerfer ins Feld fliegt (oder sogar unberührt über den Boden rollt), steht die Spieluhr noch! Erst bei der allerersten Berührung durch einen Spieler auf dem Spielfeld starten Spieluhr und Wurfuhr.",
+    "ruleReference": "DBB/FIBA Regel VIII – Art. 49.2 & Art. 50.1 (Starten der Spieluhr beim Einwurf)"
+  },
+  {
+    "id": "q-game-clock-when-starts-missed-ft",
+    "category": "Kampfgericht & Anschreiber",
+    "officialRole": "Kampfgericht / Anschreiber",
+    "question": "Der letzte Freiwurf prallt vom Ring ab und springt hoch über dem Korb in die Luft. Wann muss der Zeitnehmer die Spieluhr wieder starten?",
+    "options": [
+      "Sobald der Ball nach dem Fehlwurf den ersten Spieler auf dem Spielfeld berührt",
+      "Schon in dem Moment, in dem der Ball den Ring berührt",
+      "Sobald der Ball die Hand des Freiwerfers verlässt",
+      "Erst wenn ein Spieler mit dem Ball auf dem Boden landet und dribbelt"
+    ],
+    "correctIndex": 0,
+    "explanation": "Solange der abgeprallte Freiwurf noch in der Luft über dem Ring tanzt, bleibt die Spieluhr gestoppt. Erst in der Zehntelsekunde, in der der erste Rebounder den Ball mit den Fingern berührt, drückt der Zeitnehmer auf Start!",
+    "ruleReference": "DBB/FIBA Regel VIII – Art. 49.2 (Starten der Spieluhr nach erfolglosem letzten Freiwurf)"
+  },
+  {
+    "id": "q-throw-in-line-advance-after-timeout",
+    "category": "Kampfgericht & Anschreiber",
+    "officialRole": "Schiedsrichter & Kampfgericht",
+    "question": "Noch 15 Sekunden im 4. Viertel: Team A liegt knapp zurück, kassiert einen Korb und nimmt sofort eine Auszeit. Welches taktische Sonderrecht hat der Trainer von Team A nach der Auszeit?",
+    "options": [
+      "Er darf entscheiden, ob der Einwurf hinten an der Endlinie (mit 24 Sek. Wurfuhr) ODER vorne an der Einwurfmarkierung im Vorfeld (mit 14 Sek. Wurfuhr) ausgeführt wird!",
+      "Er bekommt durch die Auszeit automatisch 30 Sekunden auf der Wurfuhr",
+      "Er darf den Ball am Mittelkreis per Sprungball ins Spiel bringen lassen",
+      "Er darf sechs Feldspieler für den letzten Angriff aufs Feld schicken"
+    ],
+    "correctIndex": 0,
+    "explanation": "In den letzten 2:00 Minuten des 4. Viertels (und jeder Verlängerung) kann eine Auszeit den Ball nach vorne ‚beamen': Stand dem Team ein Einwurf im Rückfeld zu, darf der Trainer den Einwurf an die Einwurfmarkierung im Vorfeld verlegen – der 24-Sekunden-Zeitnehmer stellt die Wurfuhr dafür dann auf maximal 14 Sekunden!",
+    "ruleReference": "DBB/FIBA Regel IV – Art. 17.2.4 & Regel V – Art. 29.2.5 (Einwurf im Vorfeld nach Auszeit)"
+  },
+  {
+    "id": "q-alternating-possession-initial-direction",
+    "category": "Kampfgericht & Anschreiber",
+    "officialRole": "Kampfgericht / Anschreiber",
+    "question": "Zu Beginn des 1. Viertels wird der Sprungball am Mittelkreis hochgeworfen. Nach welchem Prinzip stellt der Anschreiber am Tisch direkt danach die allererste Richtung des Einwurfpfeils ein?",
+    "options": [
+      "Der Pfeil zeigt in die Angriffsrichtung der Mannschaft, die nach dem Eröffnungs-Sprungball NICHT die erste Ballkontrolle auf dem Feld erlangt hat",
+      "Den ersten Pfeil bekommt immer automatisch die Gastmannschaft",
+      "Den ersten Pfeil bekommt immer die Mannschaft, die auch den Sprungball gewonnen hat",
+      "Die Richtung wird vor Spielbeginn vom 1. Schiedsrichter per Münzwurf ausgelost"
+    ],
+    "correctIndex": 0,
+    "explanation": "Wer beim Sprungball zum Spielbeginn leer ausgeht (also nicht die erste Ballkontrolle auf dem Spielfeld bekommt), erhält zum Ausgleich den ersten Einwurf gemäß Wechselndem Ballbesitz – der Anschreiber richtet den Pfeil sofort in die Angriffsrichtung dieser Mannschaft aus!",
+    "ruleReference": "DBB/FIBA Regel IV – Art. 12.6.2 & Regel VIII – Art. 48.1 (Erste Einstellung des Einwurfpfeils)"
+  },
+  {
+    "id": "q-alternating-possession-violation-on-throw-in",
+    "category": "Kampfgericht & Anschreiber",
+    "officialRole": "Kampfgericht / Anschreiber",
+    "question": "Team A hat Einwurf nach Wechselndem Ballbesitz (Pfeil zeigt für Team A). Beim Einwurf tritt der Einwerfer von Team A jedoch mit dem Ball in der Hand aufs Spielfeld (Einwurf-Übertretung). Was passiert jetzt mit dem Ball und dem Pfeil?",
+    "options": [
+      "Team B bekommt den Einwurf UND der Einwurfpfeil am Tisch wird sofort zugunsten von Team B umgedreht (Team A verliert seinen Pfeil-Anspruch!)",
+      "Team B bekommt den Einwurf, aber der Pfeil bleibt zum Trost weiter für Team A stehen",
+      "Der Einwurf von Team A wird einmalig wiederholt",
+      "Es gibt einen echten Sprungball durch den Schiedsrichter"
+    ],
+    "correctIndex": 0,
+    "explanation": "Doppeltes Pech bei einer eigenen Einwurf-Übertretung während des Wechselnden Ballbesitzes (Art. 12.6.5): Der Ball geht per Einwurf an den Gegner UND der Anschreiber dreht den Pfeil sofort um, sodass beim nächsten Halteball ebenfalls der Gegner an der Reihe ist!",
+    "ruleReference": "DBB/FIBA Regel IV – Art. 12.6.5 (Regelübertretung beim Einwurf gemäß Wechselndem Ballbesitz)"
+  },
+  {
+    "id": "q-sub-only-after-clock-runs",
+    "category": "Kampfgericht & Anschreiber",
+    "officialRole": "Kampfgericht / Anschreiber",
+    "question": "Bei einer Spielunterbrechung wird Ersatzspieler Nr. 12 eingewechselt. Noch bevor der Ball wieder eingeworfen wird, nimmt der Gegner eine Auszeit – und der Trainer möchte Nr. 12 sofort wieder auswechseln, ohne dass eine Sekunde gespielt wurde. Geht das?",
+    "options": [
+      "Nein! Ein gerade eingewechselter (oder ausgewechselter) Spieler darf erst wieder wechseln, nachdem die Spieluhr gelaufen und der Ball erneut tot ist",
+      "Ja, während einer Auszeit darf man beliebig oft hin- und herwechseln",
+      "Ja, solange der Spieler den Ball noch nicht berührt hat",
+      "Nur der Mannschaftskapitän darf sofort wieder zurückwechseln"
+    ],
+    "correctIndex": 0,
+    "explanation": "Nach Artikel 19.2.4 muss zwischen Einwechslung und erneuter Auswechslung desselben Spielers immer mindestens eine Spielphase mit laufender Uhr liegen (einzige Ausnahme: wenn das Team sonst durch Verletzung/5. Foul weniger als 5 Spieler auf dem Feld hätte).",
+    "ruleReference": "DBB/FIBA Regel IV – Art. 19.2.4 (Sperrfrist beim Spielerwechsel)"
+  },
+  {
+    "id": "q-injured-player-must-sub-15sec",
+    "category": "Schiedsrichter & Spielleitung",
+    "officialRole": "Schiedsrichter & Kampfgericht",
+    "question": "Ein Spieler knickt um, das Spiel wird unterbrochen und der Trainer eilt zur Behandlung aufs Spielfeld. Nach 20 Sekunden zeigt der Spieler den Daumen nach oben: „Geht schon wieder, ich bleibe drauf!“ – Darf er direkt weiterspielen?",
+    "options": [
+      "Nein, er muss zwingend ausgewechselt werden! (Einzige Rettung: Ein Team nimmt eine Auszeit und er ist vor dem Wechselsignal wieder spielfähig)",
+      "Ja, sobald der Spieler selbst sagt, dass er schmerzfrei ist, darf er immer auf dem Feld bleiben",
+      "Ja, eine kurze Behandlung bis zu 2 Minuten auf dem Feld ist ohne Wechsel erlaubt",
+      "Er muss für den Rest des Viertels auf der Bank bleiben"
+    ],
+    "correctIndex": 0,
+    "explanation": "Kann ein verletzter Spieler nicht innerhalb von ca. 15 Sekunden weiterspielen oder betritt der Trainer/Betreuer zur Unterstützung das Feld, MUSS der Spieler ausgewechselt werden. Will der Trainer seinen Leistungsträger unbedingt auf dem Feld behalten, kann er ihn nur durch das Beantragen einer Auszeit ‚retten'!",
+    "ruleReference": "DBB/FIBA Regel III – Art. 5.3 & Art. 5.7 (Verletzung und Unterstützung eines Spielers)"
+  },
+  {
+    "id": "q-bleeding-player-rule",
+    "category": "Schiedsrichter & Spielleitung",
+    "officialRole": "Schiedsrichter",
+    "question": "Der Schiedsrichter entdeckt bei einem Spieler einen blutenden Kratzer am Oberarm. Wie muss der Schiedsrichter reagieren?",
+    "options": [
+      "Er muss den Spieler sofort auswechseln lassen – er darf erst zurück aufs Feld, wenn die Blutung gestillt und die Wunde sicher abgedeckt ist",
+      "Er lässt weiterspielen und kümmert sich erst in der Viertelpause darum",
+      "Er verhängt ein Technisches Foul wegen mangelnder Schutzausrüstung",
+      "Der Spieler darf mit einem Taschentuch in der Hand weiterspielen"
+    ],
+    "correctIndex": 0,
+    "explanation": "Zum Gesundheitsschutz aller Beteiligten kennt Artikel 5.6 keine Ausnahme: Jeder Spieler, der blutet oder eine offene Wunde hat, muss sofort ausgewechselt werden (und falls das Trikot blutverschmiert ist, muss auch dieses gewechselt werden).",
+    "ruleReference": "DBB/FIBA Regel III – Art. 5.6 (Blutende Spieler / offene Wunden)"
+  },
+  {
+    "id": "q-coach-standing-rule",
+    "category": "Schiedsrichter & Spielleitung",
+    "officialRole": "Schiedsrichter",
+    "question": "In einer hitzigen Spielphase stehen sowohl der Cheftrainer als auch sein 1. Trainer-Assistent gleichzeitig vor ihrer Mannschaftsbank und geben lautstark Anweisungen aufs Feld. Was sagt das Regelwerk dazu?",
+    "options": [
+      "Verboten! Während des laufenden Spiels darf immer nur EINER von beiden stehen (entweder der Trainer oder der 1. Trainer-Assistent), alle anderen auf der Bank müssen sitzen",
+      "Beide Trainer dürfen jederzeit gleichzeitig an der Seitenlinie stehen",
+      "Während des Spiels herrscht im Basketball generelle Sitzpflicht für alle Trainer",
+      "Es dürfen sogar bis zu drei Ersatzspieler dauerhaft neben dem Trainer stehen"
+    ],
+    "correctIndex": 0,
+    "explanation": "Nach Artikel 7.6 darf im Mannschaftsbank-Bereich immer nur eine einzige Person zur selben Zeit stehen – entweder der Cheftrainer oder der 1. Trainer-Assistent. Und noch ein wichtiges Detail: Der 1. Trainer-Assistent hat während des Spiels nicht das Recht, die Schiedsrichter anzusprechen!",
+    "ruleReference": "DBB/FIBA Regel III – Art. 7.3 & Art. 7.6 (Pflichten und Rechte von Trainer & Co-Trainer)"
+  },
+  {
+    "id": "q-jump-ball-catcher-violation",
+    "category": "Schiedsrichter & Spielleitung",
+    "officialRole": "Schiedsrichter",
+    "question": "Beim Sprungball zu Beginn des 1. Viertels springt der große Center von Team A deutlich höher als sein Gegenspieler und fängt den vom Schiedsrichter hochgeworfenen Ball direkt mit beiden Händen aus der Luft. Was pfeift der Schiedsrichter?",
+    "options": [
+      "Regelübertretung (Einwurf für Team B)! Beim Sprungball darf der Springer den Ball nur tippen (max. zweimal) und nicht direkt selbst fangen",
+      "Weiterspielen – wer höher springt, darf den Ball auch direkt fangen",
+      "Der Sprungball wird einfach wiederholt",
+      "Der Springer darf den Ball fangen, solange der Ball schon im Abwärtsflug war"
+    ],
+    "correctIndex": 0,
+    "explanation": "Für die beiden Springer im Mittelkreis gelten strenge Regeln (Art. 12.2): Der Ball darf erst nach dem höchsten Punkt (im Abwärtsflug) gespielt werden, und keiner der beiden Springer darf den Ball direkt fangen oder mehr als zweimal tippen, bevor er einen der acht Nicht-Springer oder den Boden berührt hat!",
+    "ruleReference": "DBB/FIBA Regel IV – Art. 12.2.4 & Art. 12.2.6 (Vorgehensweise beim Sprungball)"
+  },
+  {
+    "id": "q-own-basket-accidental",
+    "category": "Schiedsrichter & Spielleitung",
+    "officialRole": "Schiedsrichter & Kampfgericht",
+    "question": "Beim Rebound-Duell unter dem eigenen Korb tippt ein Verteidiger den Ball unglücklich in den eigenen Korb. Zählt dieses ‚Eigentor' – und wem schreibt der Anschreiber die Punkte gut?",
+    "options": [
+      "Es zählt 2 Punkte für den Gegner, und die Punkte werden auf dem Anschreibebogen dem gegnerischen Mannschaftskapitän auf dem Spielfeld gutgeschrieben!",
+      "Es zählt 2 Punkte, die dem Verteidiger als Minuspunkte eingetragen werden",
+      "Im Basketball gibt es keine Eigentore – es gibt nur Einwurf für den Gegner",
+      "Es zählt 3 Punkte für den Spieler, der dem Korb am nächsten stand"
+    ],
+    "correctIndex": 0,
+    "explanation": "Geht der Ball versehentlich in den eigenen Korb, zählt der Treffer immer 2 Punkte für die andere Mannschaft. Und weil auf dem Anschreibebogen jeder Punkt einer gegnerischen Trikotnummer zugeordnet werden muss, trägt der Anschreiber die Nummer des gegnerischen Kapitäns auf dem Feld ein!",
+    "ruleReference": "DBB/FIBA Regel IV – Art. 16.2.2 & Anhang B – B.11.2 (Zufälliger Korb in den eigenen Korb)"
+  },
+  {
+    "id": "q-own-basket-deliberate",
+    "category": "Schiedsrichter & Spielleitung",
+    "officialRole": "Schiedsrichter",
+    "question": "Ein Spieler verwechselt nach einer Auszeit die Spielrichtung, läuft völlig frei auf seinen eigenen Korb zu und legt den Ball absichtlich per Korbleger in den eigenen Korb. Was entscheidet der Schiedsrichter?",
+    "options": [
+      "Pfiff wegen Regelübertretung – der Korb zählt NICHT! Absichtliches Werfen auf den eigenen Korb ist verboten",
+      "Die 2 Punkte zählen für den Gegner, genau wie bei einem versehentlichen Eigenkorb",
+      "Technisches Foul wegen Spielverzögerung",
+      "Der Spieler bekommt die 2 Punkte für sein eigenes Team gutgeschrieben"
+    ],
+    "correctIndex": 0,
+    "explanation": "Hier unterscheidet Artikel 16.2 ganz genau zwischen Versehen und Absicht: Während ein unabsichtlicher Abpraller im eigenen Korb 2 Punkte für den Gegner zählt, ist ein absichtlicher Korbwurf auf den eigenen Korb eine Regelübertretung – die Punkte zählen nicht und der Gegner bekommt Einwurf!",
+    "ruleReference": "DBB/FIBA Regel IV – Art. 16.2.3 (Absichtlicher Korb in den eigenen Korb)"
+  },
+  {
+    "id": "q-ball-from-below-through-basket",
+    "category": "Schiedsrichter & Spielleitung",
+    "officialRole": "Schiedsrichter",
+    "question": "Bei einem Rettungsversuch unter dem Korb wirft ein Spieler den Ball so hoch, dass er von unten komplett durch Netz und Ring nach oben fliegt und anschließend von oben wieder durch den Korb fällt. Was passiert?",
+    "options": [
+      "Sofortiger Pfiff (Regelübertretung) und Einwurf für den Gegner – der Ball darf niemals vollständig von unten durch den Korb gehen!",
+      "Der Korb zählt 2 Punkte, weil der Ball am Ende von oben durch das Netz gefallen ist",
+      "Das Spiel läuft ohne Pfiff normal weiter",
+      "Es gibt Sprungball unter dem Korb"
+    ],
+    "correctIndex": 0,
+    "explanation": "Sowohl das Durchwerfen des Balls von unten durch den Ring (Art. 16.2.4) als auch das Durchgreifen mit der Hand von unten durch das Netz an den Ball (Art. 31.2.4) sind sofortige Regelübertretungen!",
+    "ruleReference": "DBB/FIBA Regel IV – Art. 16.2.4 & Regel V – Art. 31.2.4 (Ball von unten durch den Korb)"
+  },
+  {
+    "id": "q-freethrow-shooter-5sec-and-line",
+    "category": "Schiedsrichter & Spielleitung",
+    "officialRole": "Schiedsrichter",
+    "question": "Wann dürfen beim letzten Freiwurf einerseits die Rebound-Spieler an der Zone und andererseits der Freiwerfer selbst in die Zone treten?",
+    "options": [
+      "Die Rebounder an der Zone dürfen rein, sobald der Ball die Hand des Werfers verlässt – der Freiwerfer selbst erst, wenn der Ball den Ring berührt hat!",
+      "Alle Spieler (auch die Rebounder) müssen warten, bis der Ball den Ring berührt hat",
+      "Alle Spieler inklusive Freiwerfer dürfen sofort beim Abwurf über die Linie treten",
+      "Der Freiwerfer darf beim Freiwurf sogar über die Linie springen, solange er vor der Linie abspringt"
+    ],
+    "correctIndex": 0,
+    "explanation": "Ein kleiner, aber wichtiger Zeitunterschied (Art. 43.2.3 & 43.2.4): Die Spieler auf den Reboundplätzen dürfen ihre Position verlassen, sobald der Ball die Hand des Werfers verlassen hat. Der Freiwerfer selbst (und die Spieler hinter der Dreierlinie) müssen dagegen warten, bis der Ball den Ring berührt!",
+    "ruleReference": "DBB/FIBA Regel VII – Art. 43.2.3 & Art. 43.2.4 (Freiwürfe – Betreten der Zone)"
+  },
+  {
+    "id": "q-freethrow-violation-by-defender",
+    "category": "Schiedsrichter & Spielleitung",
+    "officialRole": "Schiedsrichter",
+    "question": "Beim letzten Freiwurf tritt ein Verteidiger zu früh in die Zone, noch bevor der Ball die Hand des Werfers verlässt. Was entscheidet der Schiedsrichter?",
+    "options": [
+      "Er wartet den Wurf ab: Trifft der Werfer trotzdem, zählt der Punkt (Übertretung wird ignoriert); verfehlt der Werfer, bekommt er einen Ersatzfreiwurf!",
+      "Er pfeift sofort mitten in der Wurfbewegung ab und wiederholt den Freiwurf",
+      "Der Punkt zählt automatisch, auch wenn der Ball daneben geht",
+      "Die Übertretung des Verteidigers beim Freiwurf bleibt immer straflos"
+    ],
+    "correctIndex": 0,
+    "explanation": "Deshalb hebt der Schiedsrichter beim zu frühen Reintreten eines Verteidigers zunächst nur abwartend den Arm: Fällt der Freiwurf in den Korb, hat der Werfer keinen Nachteil und der Punkt zählt! Geht der Freiwurf aber daneben, pfeift der Schiedsrichter und der Werfer erhält einen neuen Versuch (Ersatzfreiwurf).",
+    "ruleReference": "DBB/FIBA Regel VII – Art. 43.3.2 & Art. 43.3.3 (Regelübertretung beim Freiwurf durch Verteidiger)"
+  },
+  {
+    "id": "q-freethrow-injured-shooter-sub",
+    "category": "Schiedsrichter & Spielleitung",
+    "officialRole": "Schiedsrichter & Kampfgericht",
+    "question": "Ein Spieler wird beim Korbwurf gefoult, verletzt sich aber bei der Landung so, dass er behandelt und ausgewechselt werden muss. Wer muss jetzt seine beiden Freiwürfe werfen?",
+    "options": [
+      "Genau der Ersatzspieler, der für den verletzten Werfer eingewechselt wird",
+      "Der Mannschaftskapitän auf dem Spielfeld",
+      "Ein beliebiger Spieler, der schon vorher auf dem Spielfeld stand",
+      "Die Freiwürfe verfallen, wenn der Gefoulte nicht selbst werfen kann"
+    ],
+    "correctIndex": 0,
+    "explanation": "Anders als bei einem Technischen Foul (wo jeder beliebige Spieler werfen darf) gilt bei einem Foul mit Kontakt: Muss der gefoulte Werfer wegen Verletzung, 5. Foul oder Disqualifikation vom Feld, übernimmt zwingend sein direkt für ihn eingewechselter Ersatzspieler die Freiwürfe!",
+    "ruleReference": "DBB/FIBA Regel IV – Art. 19.3.8 & Regel VII – Art. 43.2.1 (Ersatzspieler für verletzten Freiwerfer)"
+  },
+  {
+    "id": "q-hanging-on-ring-safety",
+    "category": "Schiedsrichter & Spielleitung",
+    "officialRole": "Schiedsrichter",
+    "question": "Nach einem Dunking hält sich der Werfer kurzzeitig mit beiden Händen am Ring fest, weil direkt unter ihm ein anderer Spieler am Boden liegt. Gibt das ein Technisches Foul?",
+    "options": [
+      "Nein! Sich nach einem Dunking kurz am Ring festzuhalten, um sich selbst oder einen anderen Spieler vor einer Verletzung zu schützen, ist ausdrücklich erlaubt",
+      "Ja, jedes Berühren oder Festhalten des Rings ist ausnahmslos ein Technisches Foul",
+      "Der Korb wird aberkannt und der Gegner bekommt Einwurf",
+      "Es gibt 2 Freiwürfe wegen Beschädigung der Korbanlage"
+    ],
+    "correctIndex": 0,
+    "explanation": "Sich ohne Grund mit seinem Gewicht an den Ring zu hängen oder daran hochzuziehen ist ein Technisches Foul. Aber Sicherheit geht immer vor: Wenn unter dem Korb Verkehr herrscht und der Spieler durch das kurze Festhalten eine gefährliche Landung auf einem Mit- oder Gegenspieler verhindert, ist das völlig regelkonform!",
+    "ruleReference": "DBB/FIBA Regel VI – Art. 36.2.1 (Am Ring festhalten zum Verletzungsschutz)"
+  },
+  {
+    "id": "q-three-point-jump-land-inside",
+    "category": "Schiedsrichter & Spielleitung",
+    "officialRole": "Schiedsrichter",
+    "question": "Ein Spieler springt mit beiden Füßen sauber hinter der Drei-Punkte-Linie zum Wurf ab, lässt den Ball in der Luft los und landet durch seinen Vorwärtsschwung deutlich innerhalb der Dreierlinie im Zwei-Punkte-Bereich. Wie viele Punkte zählt der Treffer?",
+    "options": [
+      "3 Punkte! Entscheidend ist, wo der Werfer vor dem Absprung zuletzt den Boden berührt hat – die Landung nach dem Abwurf ändert daran nichts",
+      "Nur 2 Punkte, weil er im Zwei-Punkte-Bereich gelandet ist",
+      "Nur 2 Punkte, wenn sein Fuß beim Abwurf schon in der Luft über der Linie war",
+      "Der Wurf ist ungültig (Übertreten der Linie)"
+    ],
+    "correctIndex": 0,
+    "explanation": "Genau wie beim Rettungssprung ins Aus gilt auch an der Drei-Punkte-Linie (die selbst noch zum Zwei-Punkte-Bereich gehört!): Ein Spieler in der Luft behält den Status seines Absprungortes bei, bis er wieder landet. Springt er hinter der Linie ab und wirft in der Luft ab, zählt der Treffer 3 Punkte!",
+    "ruleReference": "DBB/FIBA Regel II – Art. 2.5.4, Regel IV – Art. 11.1 & Art. 16.2.1 (Wertung eines Drei-Punkte-Wurfs)"
+  },
+  {
+    "id": "q-minimum-players-on-court",
+    "category": "Schiedsrichter & Spielleitung",
+    "officialRole": "Schiedsrichter & Kampfgericht",
+    "question": "Eine Mannschaft reist nur mit 5 Spielern zum Auswärtsspiel an. Im Laufe des 4. Viertels scheiden drei ihrer Spieler mit jeweils 5 Fouls aus. Wird das Spiel jetzt sofort abgebrochen?",
+    "options": [
+      "Nein, es wird zu zweit gegen fünf weitergespielt! Erst wenn einer Mannschaft weniger als 2 einsatzfähige Spieler (also nur noch 1 Spieler) verbleiben, wird das Spiel abgebrochen",
+      "Ja, sobald eine Mannschaft weniger als 5 Spieler hat, ist das Spiel sofort beendet",
+      "Ja, bei weniger als 4 Spielern auf dem Feld muss abgebrochen werden",
+      "Der fünfte ausgefoulte Spieler darf mit einer Strafminute trotzdem weiterspielen"
+    ],
+    "correctIndex": 0,
+    "explanation": "Kurios, aber wahr: Um ein Basketballspiel zu BEGINNEN, muss jede Mannschaft zwingend 5 spielbereite Spieler auf dem Feld haben (Art. 9.3). Im laufenden Spiel darf ein Team nach Fouls oder Verletzungen ohne Ersatzspieler aber auf 4, 3 oder sogar 2 Spieler schrumpfen – erst bei weniger als 2 Spielern (Art. 21.1) ist Schluss!",
+    "ruleReference": "DBB/FIBA Regel IV – Art. 9.3 & Art. 21.1 (Mindestanzahl von Spielern)"
+  },
+  {
+    "id": "q-jewelry-and-fingernails",
+    "category": "Schiedsrichter & Spielleitung",
+    "officialRole": "Schiedsrichter",
+    "question": "Vor dem Spiel kontrolliert der Schiedsrichter die Spieler. Ein Spieler trägt Ohrstecker und eine Halskette, hat beides aber ordentlich mit Sport-Tape (Pflaster) abgeklebt. Darf der Schiedsrichter ihn damit spielen lassen?",
+    "options": [
+      "Nein! Schmuck, Haarschmuck und lange Fingernägel sind wegen der Verletzungsgefahr strikt verboten – auch das Abkleben mit Tape macht Schmuck nicht zulässig",
+      "Ja, sobald Schmuck mit Pflaster oder Tape abgeklebt ist, ist er offiziell erlaubt",
+      "Ja, wenn der Mannschaftskapitän des Gegners vor dem Spiel zustimmt",
+      "Ja, aber der Spieler startet automatisch mit einem persönlichen Foul"
+    ],
+    "correctIndex": 0,
+    "explanation": "Ein Dauerthema vor fast jedem Jugend- und Amateurspiel: Nach Artikel 4.4.2 und 46.4 darf der Schiedsrichter keinem Spieler das Tragen von Schmuckgegenständen, Haarschmuck oder harten Arm-/Fingerschienen gestatten – auch ein Pflaster über dem Ohrring löst sich im Zweikampf schnell und schützt nicht vor Riss- oder Schnittverletzungen!",
+    "ruleReference": "DBB/FIBA Regel III – Art. 4.4.2 & Regel VIII – Art. 46.4 (Verbot von Schmuck & Verletzungsgefahr)"
   }
 ]
 
