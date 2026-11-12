@@ -1,0 +1,22 @@
+# Offizielle Basketball-Regelwerke (nur lokale Referenz, nicht ins Repository hochladen!)
+dbb_2022/
+fiba_2026/
+
+# Betriebssystem-Dateien
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editor- & IDE-Verzeichnisse
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Optionale lokale Tooling- / Build-Artefakte
+node_modules/
+dist/
+.env
+.env.*
+*.log
+
