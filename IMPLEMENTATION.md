@@ -138,7 +138,7 @@ Die Auswertungsfunktion `getEvaluation(score)` liefert passend zur erreichten Pu
 | **Seitenbesucher gesamt** | `/` *(Pageview)* | Automatisches Laden der Startseite | Standard-Ansicht |
 | **Fortschritt & Abbruchpunkt (Drop-off)** | `quiz/step/01` bis `quiz/step/10` | Anzeigen von Frage 1 bis 10 (`renderCurrentQuestion`) | `quiz/step/` |
 | **Quiz-Abschlüsse & Punkteverteilung** | `quiz/finish/score-00` bis `quiz/finish/score-10` | Erreichen der Endauswertung (`showResults`) | `quiz/finish/` |
-| **Schwierigkeitsgrad pro Frage** | `quiz/q/<id>/correct` bzw. `quiz/q/<id>/wrong` | Auswahl einer Antwort (`handleAnswerSelection`) | `quiz/q/<id>` (Einzelfrage) bzw. `/correct` vs. `/wrong` (Gesamtquote) |
+| **Schwierigkeitsgrad pro Frage** | `quiz/q/correct/<id>` bzw. `quiz/q/wrong/<id>` | Auswahl einer Antwort (`handleAnswerSelection`) | `quiz/q/correct` vs. `quiz/q/wrong` (Gesamtquote) bzw. `<id>` (Einzelfrage) |
 
 Alle Tracking-Aufrufe laufen über `trackEvent(path, title)` in `js/app.js` vollständig fehlertolerant (`try/catch`), sodass Adblocker oder Verbindungsabbrüche in der Sporthalle den Quiz-Ablauf niemals beeinträchtigen.
 

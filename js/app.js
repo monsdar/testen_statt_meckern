@@ -341,7 +341,7 @@ function handleAnswerSelection(selectedIndex) {
   const outcome = isCorrect ? 'correct' : 'wrong';
   const outcomeLabel = isCorrect ? 'Richtig' : 'Falsch';
   trackEvent(
-    `quiz/q/${questionId}/${outcome}`,
+    `quiz/q/${outcome}/${questionId}`,
     `${outcomeLabel}: ${questionId} (${question.category})`
   );
 }
