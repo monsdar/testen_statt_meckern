@@ -37,8 +37,9 @@ flowchart TD
 e:\Projects\TestenStattMeckern\
 ├── index.html                  # Semantisches HTML5-Grundgerüst mit den 3 App-Screens
 ├── css/
-│   └── styles.css              # BG BiBA Design Tokens, Layout, Komponenten, Animationen
+│   └── styles.css              # Design Tokens, dynamische Kontrast-/Hover-Berechnung, Layout
 ├── js/
+│   ├── config.js               # Zentrale Vereins-Konfiguration (White-Labeling für Forks)
 │   └── app.js                  # Quiz-State, Shuffle-Logik, DOM-Rendering, Share-API
 ├── data/
 │   └── questions.json          # Kuratierter Fragenpool (mind. 25–40 Fragen für Abwechslung)
@@ -51,7 +52,7 @@ e:\Projects\TestenStattMeckern\
 ├── .gitignore                  # Schließt dbb_2022/ und fiba_2026/ strikt vom Repo aus
 ├── AGENTS.md                   # Regeln für KI-Agenten & Entwickler
 ├── IMPLEMENTATION.md           # Architektur- & Implementierungsdokumentation
-└── README.md                   # Überblick für Endnutzer & Entwickler
+└── README.md                   # Überblick & Fork-Anleitung für andere Vereine
 ```
 
 ---
@@ -130,17 +131,18 @@ Die Auswertungsfunktion `getEvaluation(score)` liefert passend zur erreichten Pu
 | **8–9 / 10** | 🔥 *Kampfgericht-Kandidat* | **„{score}/10 Richtige! Fast fehlerfrei! Mit diesem Regelwissen wärst du eine echte Verstärkung am Anschreibertisch oder mit der Pfeife auf dem Feld."** |
 | **10 / 10** | 🏆 *Schiri-Versteher* | **„10/10 Richtige! Perfekt - Du weißt wahrscheinlich ganz genau wie schwer es ist immer die richtigen Entscheidungen zu treffen."** |
 
-### 4.4 Anonyme Auswertung via GoatCounter (Privacy-First Analytics)
-Über das asynchrone GoatCounter-Skript (`https://biba-regeltest.goatcounter.com/count`) werden ohne Cookies und DSGVO-konform sowohl Seitenaufrufe als auch inhaltliche Quiz-Metriken als Custom Events (`event: true`) erfasst:
+### 4.4 Anonyme Auswertung via GoatCounter (Privacy-First & Multi-Club Analytics)
+Über das asynchrone GoatCounter-Skript (`https://biba-regeltest.goatcounter.com/count`, konfigurierbar in `js/config.js`) werden ohne Cookies und DSGVO-konform sowohl vereinsbezogene Seitenaufrufe als auch vereinsübergreifende Quiz-Metriken als Custom Events (`event: true`) erfasst:
 
 | Auswertungsziel | Event-Pfad (`path`) | Auslöser | Filter im GoatCounter-Dashboard |
 |---|---|---|---|
-| **Seitenbesucher gesamt** | `/` *(Pageview)* | Automatisches Laden der Startseite | Standard-Ansicht |
+| **Seitenbesucher pro Verein** | `/club/<club-slug>` *(Pageview)* | Automatisches Laden der Startseite (`goatcounter.path` in `js/config.js`) | `/club/` bzw. `/club/bg-biba` |
+| **Gestartete Runden pro Verein** | `quiz/club/<club-slug>` | Klick auf „Jetzt Regelwissen testen" / „Noch eine Runde" (`startQuiz`) | `quiz/club/` |
 | **Fortschritt & Abbruchpunkt (Drop-off)** | `quiz/step/01` bis `quiz/step/10` | Anzeigen von Frage 1 bis 10 (`renderCurrentQuestion`) | `quiz/step/` |
 | **Quiz-Abschlüsse & Punkteverteilung** | `quiz/finish/score-00` bis `quiz/finish/score-10` | Erreichen der Endauswertung (`showResults`) | `quiz/finish/` |
 | **Schwierigkeitsgrad pro Frage** | `quiz/q/correct/<id>` bzw. `quiz/q/wrong/<id>` | Auswahl einer Antwort (`handleAnswerSelection`) | `quiz/q/correct` vs. `quiz/q/wrong` (Gesamtquote) bzw. `<id>` (Einzelfrage) |
 
-Alle Tracking-Aufrufe laufen über `trackEvent(path, title)` in `js/app.js` vollständig fehlertolerant (`try/catch`), sodass Adblocker oder Verbindungsabbrüche in der Sporthalle den Quiz-Ablauf niemals beeinträchtigen.
+Alle Tracking-Aufrufe laufen über `trackEvent(path, title)` in `js/app.js` vollständig fehlertolerant (`try/catch`), sodass Adblocker oder Verbindungsabbrüche in der Sporthalle den Quiz-Ablauf niemals beeinträchtigen. Setzt ein Verein in `js/config.js` `analytics.enabled = false`, wird weder `count.js` geladen noch Abschnitt 4 der Datenschutzerklärung angezeigt.
 
 ---
 

@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: GPL-3.0-or-later
 /**
  * BG BiBA – "Testen statt Meckern" Quiz-Engine
  * Reine statische Vanilla-JS-Anwendung für GitHub Pages
@@ -20,12 +21,51 @@ let catalogLoadPromise = null;
 const pendingAnalyticsEvents = [];
 
 /**
+ * Liest die Vereins-Konfiguration aus window.CLUB_CONFIG (js/config.js)
+ * mit sicheren Standardwerten der BG BiBA als Fallback.
+ */
+function getClubConfig() {
+  return window.CLUB_CONFIG || {};
+}
+
+function getClubShortName() {
+  return getClubConfig().club?.shortName || 'BG BiBA';
+}
+
+function getInitiativeName() {
+  return getClubConfig().club?.initiativeName || 'Testen statt Meckern';
+}
+
+function getClubSlug() {
+  const cfg = getClubConfig();
+  const raw = cfg.analytics?.clubSlug || getClubShortName();
+  return (
+    String(raw)
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-+|-+$/g, '') || 'default-club'
+  );
+}
+
+function isAnalyticsEnabled() {
+  const analytics = getClubConfig().analytics;
+  if (!analytics) return true;
+  return Boolean(analytics.enabled && analytics.endpoint);
+}
+
+/**
  * Sendet ein anonymes Custom Event an GoatCounter (non-blocking & fehlertolerant).
  * Falls das async-Skript bei schwachem Hallenempfang verzögert lädt, werden frühe
  * Events kurzzeitig im Speicher gepuffert und bei Bereitschaft nachgesendet.
  */
 function flushPendingAnalyticsEvents() {
   try {
+    if (!isAnalyticsEnabled()) {
+      pendingAnalyticsEvents.length = 0;
+      return;
+    }
     if (!window.goatcounter || typeof window.goatcounter.count !== 'function') {
       return;
     }
@@ -44,6 +84,9 @@ function flushPendingAnalyticsEvents() {
 
 function trackEvent(path, title) {
   try {
+    if (!isAnalyticsEnabled()) {
+      return;
+    }
     if (window.goatcounter && typeof window.goatcounter.count === 'function') {
       flushPendingAnalyticsEvents();
       window.goatcounter.count({
@@ -60,6 +103,195 @@ function trackEvent(path, title) {
 }
 
 window.addEventListener('load', flushPendingAnalyticsEvents);
+
+/**
+ * Lädt GoatCounter nur dann, wenn in js/config.js aktiviert
+ */
+function initAnalytics() {
+  try {
+    if (!isAnalyticsEnabled()) {
+      return;
+    }
+    const endpoint = getClubConfig().analytics?.endpoint || 'https://biba-regeltest.goatcounter.com/count';
+    if (document.querySelector('script[data-goatcounter]')) {
+      return;
+    }
+    const script = document.createElement('script');
+    script.dataset.goatcounter = endpoint;
+    script.async = true;
+    script.src = 'https://gc.zgo.at/count.js';
+    script.addEventListener('load', flushPendingAnalyticsEvents);
+    document.body.appendChild(script);
+  } catch {
+    // Niemals Fehler werfen, wenn Content-Blocker greifen
+  }
+}
+
+/**
+ * Überträgt alle Vereins-Einstellungen aus js/config.js (Farben, Logos, Vereinsname,
+ * Kontakt-E-Mail, Impressum & Datenschutzerklärung) in das DOM.
+ */
+function applyClubConfig() {
+  const cfg = getClubConfig();
+  const shortName = getClubShortName();
+  const fullName = cfg.club?.fullName ?? 'Basketballgemeinschaft Bierden-Bassen-Achim';
+  const subline = cfg.club?.subline ?? 'TSV Bierden von 1928 e.V. · TSV Bassen e.V. · TSV Achim 1860 e.V.';
+  const initiative = getInitiativeName();
+  const contactEmail = cfg.club?.contactEmail ?? 'info@bgbiba.net';
+
+  // Header
+  const headerLogo = document.getElementById('header-logo');
+  if (headerLogo) {
+    if (cfg.logos?.headerLogo) headerLogo.src = cfg.logos.headerLogo;
+    if (cfg.logos?.altText) headerLogo.alt = cfg.logos.altText;
+  }
+  const headerClubName = document.getElementById('header-club-name');
+  if (headerClubName) headerClubName.textContent = shortName;
+
+  const headerInitiative = document.getElementById('header-initiative-name');
+  if (headerInitiative) headerInitiative.textContent = initiative;
+
+  // Officials-Box (Auswertungs-Screen)
+  const logoLight = document.getElementById('officials-logo-light');
+  if (logoLight) {
+    if (cfg.logos?.cardLogoLight) logoLight.src = cfg.logos.cardLogoLight;
+    if (cfg.logos?.altText) logoLight.alt = cfg.logos.altText;
+  }
+  const logoDark = document.getElementById('officials-logo-dark');
+  if (logoDark) {
+    if (cfg.logos?.cardLogoDark) logoDark.src = cfg.logos.cardLogoDark;
+    if (cfg.logos?.altText) logoDark.alt = cfg.logos.altText;
+  }
+  const officialsSubtitle = document.getElementById('officials-subtitle');
+  if (officialsSubtitle) {
+    officialsSubtitle.textContent = fullName || shortName;
+  }
+  const officialsCta = document.getElementById('officials-cta');
+  const officialsContactLink = document.getElementById('officials-contact-link');
+  if (officialsContactLink && contactEmail) {
+    officialsContactLink.href = `mailto:${contactEmail}`;
+    officialsContactLink.textContent = contactEmail;
+    if (officialsCta) officialsCta.hidden = false;
+  } else if (officialsCta && !contactEmail) {
+    officialsCta.hidden = true;
+  }
+
+  // Footer
+  const footerShort = document.getElementById('footer-club-short');
+  if (footerShort) footerShort.textContent = shortName;
+
+  const footerFull = document.getElementById('footer-club-full');
+  if (footerFull) {
+    footerFull.textContent = fullName && fullName !== shortName ? ` – ${fullName}` : '';
+  }
+
+  const footerMeta = document.getElementById('footer-meta');
+  if (footerMeta) {
+    footerMeta.textContent = subline;
+    footerMeta.hidden = !subline;
+  }
+
+  const footerInitiative = document.getElementById('footer-initiative-name');
+  if (footerInitiative) footerInitiative.textContent = initiative;
+
+  // Rechtliche Angaben (Impressum & Datenschutz)
+  const legal = cfg.legal;
+  if (legal) {
+    // Externe Links vs. eingebaute Dialoge
+    const impressumBtn = document.getElementById('footer-impressum-btn');
+    const impressumLink = document.getElementById('footer-impressum-link');
+    if (legal.externalImpressumUrl && impressumBtn && impressumLink) {
+      impressumBtn.hidden = true;
+      impressumLink.href = legal.externalImpressumUrl;
+      impressumLink.hidden = false;
+    }
+
+    const privacyBtn = document.getElementById('footer-privacy-btn');
+    const privacyLink = document.getElementById('footer-privacy-link');
+    if (legal.externalPrivacyUrl && privacyBtn && privacyLink) {
+      privacyBtn.hidden = true;
+      privacyLink.href = legal.externalPrivacyUrl;
+      privacyLink.hidden = false;
+    }
+
+    const orgName = legal.organizationName || `${shortName}${fullName ? ` – ${fullName}` : ''}`;
+    const impOrgName = document.getElementById('impressum-org-name');
+    if (impOrgName) impOrgName.textContent = orgName;
+
+    const impOrgDetails = document.getElementById('impressum-org-details');
+    if (impOrgDetails) {
+      impOrgDetails.textContent = legal.organizationDetails || '';
+      impOrgDetails.hidden = !legal.organizationDetails;
+    }
+
+    const addressLines = [legal.representativeName, legal.street, legal.postalCodeCity]
+      .filter(Boolean)
+      .join('\n');
+    const impAddress = document.getElementById('impressum-address');
+    if (impAddress && addressLines) impAddress.textContent = addressLines;
+
+    const legalEmail = legal.email || contactEmail;
+    const impEmailLink = document.getElementById('impressum-email-link');
+    if (impEmailLink && legalEmail) {
+      impEmailLink.href = `mailto:${legalEmail}`;
+      impEmailLink.textContent = legalEmail;
+    }
+
+    const impPhoneRow = document.getElementById('impressum-phone-row');
+    const impPhoneText = document.getElementById('impressum-phone-text');
+    if (impPhoneRow && impPhoneText) {
+      if (legal.phone) {
+        impPhoneText.textContent = legal.phone;
+        impPhoneRow.hidden = false;
+      } else {
+        impPhoneRow.hidden = true;
+      }
+    }
+
+    const impMstv = document.getElementById('impressum-mstv');
+    if (impMstv) {
+      impMstv.textContent = legal.responsiblePersonMStV || addressLines;
+    }
+
+    // Datenschutzerklärung
+    const privOrgName = document.getElementById('privacy-org-name');
+    if (privOrgName) privOrgName.textContent = orgName;
+
+    const privAddressLine = document.getElementById('privacy-address-line');
+    if (privAddressLine) {
+      const singleLineAddr = [legal.representativeName, legal.street, legal.postalCodeCity]
+        .filter(Boolean)
+        .join(', ');
+      if (singleLineAddr) privAddressLine.textContent = singleLineAddr;
+    }
+
+    const privEmailLink = document.getElementById('privacy-email-link');
+    if (privEmailLink && legalEmail) {
+      privEmailLink.href = `mailto:${legalEmail}`;
+      privEmailLink.textContent = legalEmail;
+    }
+
+    const privAuthority = document.getElementById('privacy-supervisory-authority');
+    if (privAuthority && legal.supervisoryAuthority) {
+      privAuthority.textContent = legal.supervisoryAuthority;
+    }
+  }
+
+  // Falls Analytics deaktiviert ist, Abschnitt 4 in der Datenschutzerklärung ausblenden
+  // und nachfolgende Überschriften sauber durchnummerieren.
+  const analyticsSection = document.getElementById('privacy-analytics-section');
+  const storageHeading = document.getElementById('privacy-heading-storage');
+  const rightsHeading = document.getElementById('privacy-heading-rights');
+  if (!isAnalyticsEnabled()) {
+    if (analyticsSection) analyticsSection.hidden = true;
+    if (storageHeading) {
+      storageHeading.textContent = '4. Lokale Speicherung des Farbschemas (localStorage)';
+    }
+    if (rightsHeading) {
+      rightsHeading.textContent = '5. Deine Rechte';
+    }
+  }
+}
 
 // DOM-Referenzen
 const viewStart = document.getElementById('view-start');
@@ -206,6 +438,11 @@ async function startQuiz() {
   quizState.isAnswered = false;
   quizState.history = [];
 
+  trackEvent(
+    `quiz/club/${getClubSlug()}`,
+    `Quiz-Runde gestartet: ${getClubShortName()}`
+  );
+
   renderCurrentQuestion(true);
 }
 
@@ -252,7 +489,7 @@ function renderCurrentQuestion(isFirstQuestion = false) {
     optionsContainer.appendChild(btn);
   });
 
-  const pageTitle = `Frage ${index + 1} von ${total} | BG BiBA Regelquiz`;
+  const pageTitle = `Frage ${index + 1} von ${total} | ${getClubShortName()} Regelquiz`;
   if (isFirstQuestion || viewQuiz.hidden) {
     switchView(viewQuiz, questionText, pageTitle);
   } else {
@@ -400,12 +637,13 @@ function getEvaluation(score) {
         'Mit diesem Regelwissen weißt du genau, wie anspruchsvoll der Job unserer Unparteiischen und Anschreiber ist.',
     };
   }
+  const shortName = getClubShortName();
+  const clubPhrase = shortName === 'BG BiBA' ? 'bei der BG BiBA' : `bei ${shortName}`;
   return {
     rank: '🏆 Schiri-Versteher',
     headline:
       '10/10 Richtige! Perfekt - Du weißt wahrscheinlich ganz genau wie schwer es ist immer die richtigen Entscheidungen zu treffen.',
-    subtext:
-      'Volle Punktzahl! Entweder hast du selbst schon die Pfeife in der Hand gehabt – oder du bist unser nächstes Talent für Schiedsrichter & Kampfgericht bei der BG BiBA!',
+    subtext: `Volle Punktzahl! Entweder hast du selbst schon die Pfeife in der Hand gehabt – oder du bist unser nächstes Talent für Schiedsrichter & Kampfgericht ${clubPhrase}!`,
   };
 }
 
@@ -446,7 +684,7 @@ function showResults() {
   switchView(
     viewResult,
     resultHeadline,
-    `Auswertung: ${score}/${total} | BG BiBA Regelquiz`
+    `Auswertung: ${score}/${total} | ${getClubShortName()} Regelquiz`
   );
 
   const paddedScore = String(score).padStart(2, '0');
@@ -461,13 +699,15 @@ function showResults() {
  */
 async function shareResult() {
   const total = quizState.currentQuestions.length || QUESTIONS_PER_ROUND;
-  const shareText = `🏀 Ich habe ${quizState.score}/${total} Richtige beim BG BiBA Basketball-Regelquiz „Testen statt Meckern“ geschafft! Schaffst du mehr?`;
+  const shortName = getClubShortName();
+  const initiative = getInitiativeName();
+  const shareText = `🏀 Ich habe ${quizState.score}/${total} Richtige beim ${shortName} Basketball-Regelquiz „${initiative}“ geschafft! Schaffst du mehr?`;
   const shareUrl = window.location.href;
 
   if (navigator.share) {
     try {
       await navigator.share({
-        title: 'Testen statt Meckern – BG BiBA Regelquiz',
+        title: `${initiative} – ${shortName} Regelquiz`,
         text: shareText,
         url: shareUrl,
       });
@@ -585,6 +825,8 @@ btnRestartQuiz.addEventListener('click', startQuiz);
 btnShareResult.addEventListener('click', shareResult);
 
 // Initialisierung
+applyClubConfig();
+initAnalytics();
 initThemeToggle();
 initLegalDialogs();
 loadQuestionCatalog();

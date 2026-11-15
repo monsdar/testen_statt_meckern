@@ -72,6 +72,37 @@ Am Ende der 10 Fragen erhältst du dein persönliches Ergebnis mit einem lockere
 
 ---
 
+## 🚀 Für andere Basketballvereine: Eigenes Vereins-Quiz in 5 Minuten (Fork-Anleitung)
+
+Ihr möchtet **„Testen statt Meckern"** auch in eurer Sporthalle aufhängen? Sehr gerne!  
+Die gesamte Webapp ist so vorbereitet, dass ihr **keinen Programmiercode (`index.html`, `styles.css`, `app.js`) anfassen müsst**. Alle Vereinsfarben, Logos und das Impressum werden zentral in einer einzigen, ausführlich kommentierten Datei (`js/config.js`) gepflegt.
+
+### Schritt 1: Repository forken
+1. Klickt oben rechts auf dieser GitHub-Seite auf **Fork** (ein kostenloser GitHub-Account genügt).
+2. Dadurch erhaltet ihr eine eigene Kopie des Projekts unter eurem GitHub-Account.
+
+### Schritt 2: Vereinslogo(s) im Ordner `assets/` ablegen
+1. Ladet euer Vereinswappen (idealerweise quadratisch als `.png` oder `.svg` mit transparentem Hintergrund) in den Ordner `assets/` hoch (geht direkt im Browser über **Add file → Upload files**).
+2. *Hinweis:* Wenn ihr nur eine einzige Logo-Datei habt, könnt ihr diese für alle Ansichten (Header, Helles/Dunkles Design, Favicon) verwenden.
+
+### Schritt 3: Vereinsdaten & Farben in `js/config.js` eintragen
+Öffnet die Datei [`js/config.js`](./js/config.js) direkt auf GitHub (Stift-Symbol **Edit this file**) und passt die 4 Blöcke an:
+1. **`club`:** Euer Vereinsname (`shortName`, `fullName`), ggf. Stammvereine/Abteilung (`subline`) und eure Kontakt-E-Mail (`contactEmail`) für Schiedsrichter-/Kampfrichter-Interessenten.
+2. **`theme`:** Eure beiden Vereinsfarben als Hex-Code (`primaryColor` für Header/Badges, `accentColor` für Buttons/Fortschrittsbalken) sowie `logoBorderRadius` (`'50%'` für runde Wappen oder `'0'` für eckige/freie Wappen). **Kontrast-Schriftfarben (Schwarz/Weiß) und Button-Hover-Farben berechnet die App automatisch!**
+3. **`logos`:** Tragt die Dateinamen eurer hochgeladenen Logos aus `./assets/...` ein.
+4. **`legal`:** Tragt eure Impressums- und Datenschutz-Angaben (§ 5 DDG / DSGVO) ein – **oder** hinterlegt bei `externalImpressumUrl` / `externalPrivacyUrl` einfach die Links zu eurem bestehenden Vereins-Impressum und eurer Datenschutzerklärung.
+
+### Schritt 4: GitHub Pages aktivieren & QR-Code erstellen
+1. Geht in eurem Fork auf **Settings → Pages**.
+2. Wählt unter **Build and deployment → Source** die Option `Deploy from a branch` und darunter den Branch `main` sowie den Ordner `/ (root)` aus und klickt auf **Save**.
+3. Nach ca. 1 Minute ist euer Quiz kostenlos unter `https://<euer-github-name>.github.io/TestenStattMeckern/` erreichbar.
+4. *(Optional – Eigene Subdomain):* Wenn das Quiz z. B. unter `quiz.euer-verein.de` laufen soll, legt bei eurem Domain-Anbieter einen `CNAME`-Eintrag auf `<euer-github-name>.github.io` an und tragt `quiz.euer-verein.de` unter **Settings → Pages → Custom domain** ein (Häkchen bei *Enforce HTTPS* setzen).
+
+### 🔄 Später neue Regelfragen übernehmen (1-Klick-Update)
+Da ihr nur `js/config.js` und eure eigenen Logo-Dateien angepasst habt, könnt ihr jederzeit auf der Startseite eures GitHub-Forks auf **Sync fork → Update branch** klicken, wenn im Hauptprojekt neue Basketball-Regelfragen ergänzt werden – ohne dass eure Vereinsdaten überschrieben werden!
+
+---
+
 ## 🛠️ Überblick für Entwickler & Maintainer
 
 Die App ist bewusst als **reine statische Webanwendung (Vanilla HTML, CSS, JavaScript)** konzipiert, damit sie ohne Build-Zwang, Serverkosten oder Wartungsaufwand direkt auf **GitHub Pages** gehostet werden kann.
@@ -82,15 +113,17 @@ Die App ist bewusst als **reine statische Webanwendung (Vanilla HTML, CSS, JavaS
 TestenStattMeckern/
 ├── index.html              # Hauptseite (Start-, Quiz- und Auswertungs-Ansicht)
 ├── css/
-│   └── styles.css          # Styling nach BG BiBA Brand Guidelines (Design Tokens, Mobile-First)
+│   └── styles.css          # Styling & Design Tokens (automatische Kontrast- & Hover-Berechnung)
 ├── js/
+│   ├── config.js           # Zentrale Vereins-Konfiguration (Name, Farben, Logos, Impressum, Statistik)
 │   └── app.js              # Quiz-Engine (Zufallsauswahl, State-Handling, Auswertung, Share)
 ├── data/
 │   └── questions.json      # Kuratierter Fragenkatalog inkl. Erklärungen & Regel-Referenzen
 ├── assets/
-│   └── ...                 # BG BiBA Logos & Icons (gemäß Brand Guidelines)
+│   └── ...                 # Vereinslogos & Icons
 ├── AGENTS.md               # Verbindliche Regeln für KI-Assistenten & Beitragende
 ├── IMPLEMENTATION.md       # Architektur-, Design- und Implementierungsdetails
+├── LICENSE                 # GNU General Public License v3.0 (GPLv3)
 ├── README.md               # Diese Dokumentation
 └── .gitignore              # Schließt u. a. lokale Referenz-Regelwerke (dbb_2022/, fiba_2026/) aus
 ```
@@ -126,5 +159,6 @@ Alle Fragen liegen strukturiert in `data/questions.json`. Um neue Fragen zu erg�
 
 ## 📄 Lizenz & Markenhinweis
 
-- **Vereinsname, Wappen & Corporate Design:** Sämtliche Rechte an den Logos, Wortmarken und grafischen Elementen der **BG BiBA (Basketballgemeinschaft Bierden-Bassen-Achim)** liegen bei der Spielgemeinschaft bzw. den beteiligten Stammvereinen (*TSV Bierden von 1928 e.V.*, *TSV Bassen e.V.*, *TSV Achim 1860 e.V.*). Details siehe [BG BiBA Brand Guidelines](https://wiki.bgbiba.de/books/media/page/bg-biba-brand-guidelines) (Kontakt: `info@bgbiba.net`).
+- **Quellcode & Fragenkatalog (GPLv3):** Der Programmcode dieser Webapp sowie der kuratierte Fragenkatalog (`data/questions.json`) stehen unter der **[GNU General Public License v3.0 (GPLv3)](./LICENSE)** (Copyleft). Das bedeutet: Andere Vereine und Entwickler dürfen das Projekt kostenlos nutzen, anpassen und weiterverbreiten, **müssen** jedoch sämtliche Änderungen, Erweiterungen und abgeleiteten Versionen ebenfalls offen unter derselben GPLv3-Lizenz samt Quellcode zugänglich machen. Eine Umwandlung in proprietäre Closed-Source-Software ist ausgeschlossen.
+- **Vereinsname, Wappen & Corporate Design (Ausnahme von der Open-Source-Lizenz):** Sämtliche Rechte an den Logos (`assets/bgbiba_*`), Wortmarken und grafischen Elementen der **BG BiBA (Basketballgemeinschaft Bierden-Bassen-Achim)** liegen ausschließlich bei der Spielgemeinschaft bzw. den beteiligten Stammvereinen (*TSV Bierden von 1928 e.V.*, *TSV Bassen e.V.*, *TSV Achim 1860 e.V.*) und sind **nicht** Teil der GPLv3-Lizenzierung. Andere Vereine müssen bei einem Fork ihre eigenen Vereinslogos und Impressumsdaten in `js/config.js` hinterlegen. Details siehe [BG BiBA Brand Guidelines](https://wiki.bgbiba.de/books/media/page/bg-biba-brand-guidelines) (Kontakt: `info@bgbiba.net`).
 

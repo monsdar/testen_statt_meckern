@@ -11,7 +11,8 @@
   </script>
   <title>Testen statt Meckern | BG BiBA Basketball-Regelquiz</title>
   <meta name="description" content="10 zufällige Basketball-Regelfragen der BG BiBA (Basketballgemeinschaft Bierden-Bassen-Achim). Teste dein Regelwissen direkt auf der Tribüne!">
-  <link rel="icon" type="image/png" href="./assets/bgbiba_full_tiny.png">
+  <link id="site-favicon" rel="icon" type="image/png" href="./assets/bgbiba_full_tiny.png">
+  <script src="./js/config.js"></script>
   <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
@@ -22,6 +23,7 @@
       <div class="brand-identity">
         <div class="brand-logo-wrap">
           <img
+            id="header-logo"
             src="./assets/bgbiba_full_black_white.png"
             alt="Vereinswappen der BG BiBA"
             class="brand-logo"
@@ -31,8 +33,8 @@
           >
         </div>
         <div class="brand-titles">
-          <span class="brand-club">BG BiBA</span>
-          <span class="brand-initiative">Testen statt Meckern</span>
+          <span id="header-club-name" class="brand-club">BG BiBA</span>
+          <span id="header-initiative-name" class="brand-initiative">Testen statt Meckern</span>
         </div>
       </div>
 
@@ -151,16 +153,18 @@
           <div class="officials-header">
             <div class="officials-logo-wrap">
               <img
+                id="officials-logo-light"
                 src="./assets/bgbiba_full_small.png"
-                alt="Logo der BG BiBA"
+                alt="Vereinswappen der BG BiBA"
                 class="officials-logo logo-light-only"
                 width="52"
                 height="52"
                 loading="lazy"
               >
               <img
+                id="officials-logo-dark"
                 src="./assets/bgbiba_full_black_white.png"
-                alt="Logo der BG BiBA"
+                alt="Vereinswappen der BG BiBA"
                 class="officials-logo logo-dark-only"
                 width="52"
                 height="52"
@@ -169,14 +173,14 @@
             </div>
             <div>
               <h3 id="officials-box-title" class="officials-title">Ohne Schiris &amp; Kampfgericht kein Spiel!</h3>
-              <p class="officials-subtitle">Basketballgemeinschaft Bierden-Bassen-Achim</p>
+              <p id="officials-subtitle" class="officials-subtitle">Basketballgemeinschaft Bierden-Bassen-Achim</p>
             </div>
           </div>
           <p class="officials-text">
             Du hattest gerade in Ruhe auf der Tribüne Zeit zum Überlegen – auf dem Feld oder am Anschreibertisch bleiben oft nur <strong>0,5 Sekunden</strong> bei vollem Spieltempo. Danke, dass du unsere Unparteiischen und Kampfrichter mit Fairness und Respekt unterstützt!
           </p>
-          <p class="officials-cta">
-            <strong>Lust, selbst einzusteigen?</strong> Ob Anschreiber/Zeitnehmer am Tisch oder Schiedsrichter-Lehrgang: Sprich uns in der Halle an oder schreib an <a href="mailto:info@bgbiba.net">info@bgbiba.net</a>!
+          <p id="officials-cta" class="officials-cta">
+            <strong>Lust, selbst einzusteigen?</strong> Ob Anschreiber/Zeitnehmer am Tisch oder Schiedsrichter-Lehrgang: Sprich uns in der Halle an oder schreib an <a id="officials-contact-link" href="mailto:info@bgbiba.net">info@bgbiba.net</a>!
           </p>
         </aside>
 
@@ -200,22 +204,28 @@
   <footer class="site-footer">
     <div class="footer-inner">
       <p class="footer-brand">
-        <strong>BG BiBA</strong> – Basketballgemeinschaft Bierden-Bassen-Achim
+        <strong id="footer-club-short">BG BiBA</strong><span id="footer-club-full"> – Basketballgemeinschaft Bierden-Bassen-Achim</span>
       </p>
-      <p class="footer-meta">
+      <p id="footer-meta" class="footer-meta">
         TSV Bierden von 1928 e.V. · TSV Bassen e.V. · TSV Achim 1860 e.V.
       </p>
       <p class="footer-legal">
-        Initiative „Testen statt Meckern“ · Regelreferenz: Offizielle DBB-/FIBA-Basketball-Regeln
+        Initiative „<span id="footer-initiative-name">Testen statt Meckern</span>“ · Regelreferenz: Offizielle DBB-/FIBA-Basketball-Regeln
       </p>
       <nav class="footer-nav" aria-label="Rechtliche Hinweise">
-        <button type="button" class="footer-link-btn" data-dialog-open="dialog-impressum">
+        <button type="button" id="footer-impressum-btn" class="footer-link-btn" data-dialog-open="dialog-impressum">
           Impressum
         </button>
+        <a id="footer-impressum-link" class="footer-link-btn" href="#" target="_blank" rel="noopener noreferrer" hidden>
+          Impressum
+        </a>
         <span class="footer-sep" aria-hidden="true">·</span>
-        <button type="button" class="footer-link-btn" data-dialog-open="dialog-privacy">
+        <button type="button" id="footer-privacy-btn" class="footer-link-btn" data-dialog-open="dialog-privacy">
           Datenschutzerklärung
         </button>
+        <a id="footer-privacy-link" class="footer-link-btn" href="#" target="_blank" rel="noopener noreferrer" hidden>
+          Datenschutzerklärung
+        </a>
       </nav>
     </div>
   </footer>
@@ -235,26 +245,23 @@
       <div class="legal-dialog-body">
         <h3>Angaben gemäß § 5 DDG</h3>
         <p>
-          <strong>BG BiBA – Basketballgemeinschaft Bierden-Bassen-Achim</strong><br>
-          Zusammenschluss der Basketballabteilungen der Stammvereine TSV Bierden von 1928 e.V., TSV Bassen e.V. und TSV Achim 1860 e.V.
+          <strong id="impressum-org-name">BG BiBA – Basketballgemeinschaft Bierden-Bassen-Achim</strong>
+          <span id="impressum-org-details" class="legal-block-line">Zusammenschluss der Basketballabteilungen der Stammvereine TSV Bierden von 1928 e.V., TSV Bassen e.V. und TSV Achim 1860 e.V.</span>
         </p>
-        <p>
-          Jörg Grüneberg<br>
-          Am Berg 101<br>
-          28876 Oyten
-        </p>
+        <p id="impressum-address" class="legal-preline">Jörg Grüneberg
+Am Berg 101
+28876 Oyten</p>
 
         <h3>Kontakt</h3>
         <p>
-          E-Mail: <a href="mailto:info@bgbiba.net">info@bgbiba.net</a>
+          E-Mail: <a id="impressum-email-link" href="mailto:info@bgbiba.net">info@bgbiba.net</a>
+          <span id="impressum-phone-row" class="legal-block-line" hidden>Telefon: <span id="impressum-phone-text"></span></span>
         </p>
 
         <h3>Redaktionell verantwortlich (§ 18 Abs. 2 MStV)</h3>
-        <p>
-          Jörg Grüneberg<br>
-          Am Berg 101<br>
-          28876 Oyten
-        </p>
+        <p id="impressum-mstv" class="legal-preline">Jörg Grüneberg
+Am Berg 101
+28876 Oyten</p>
 
         <h3>Hinweis zu den Basketball-Regelwerken</h3>
         <p>
@@ -285,9 +292,9 @@
       <div class="legal-dialog-body">
         <h3>1. Verantwortlicher</h3>
         <p>
-          BG BiBA – Basketballgemeinschaft Bierden-Bassen-Achim<br>
-          Jörg Grüneberg, Am Berg 101, 28876 Oyten<br>
-          E-Mail: <a href="mailto:info@bgbiba.net">info@bgbiba.net</a>
+          <span id="privacy-org-name" class="legal-block-line">BG BiBA – Basketballgemeinschaft Bierden-Bassen-Achim</span>
+          <span id="privacy-address-line" class="legal-block-line">Jörg Grüneberg, Am Berg 101, 28876 Oyten</span>
+          E-Mail: <a id="privacy-email-link" href="mailto:info@bgbiba.net">info@bgbiba.net</a>
         </p>
 
         <h3>2. Grundsatz: Privacy by Design (Keine Cookies)</h3>
@@ -300,24 +307,26 @@
           Diese statische Webseite wird über <em>GitHub Pages</em> (GitHub B.V., Prins Bernhardplein 200, 1097 JB Amsterdam, Niederlande / GitHub Inc., USA) gehostet. Beim Aufruf der Seite übermittelt dein Browser technisch bedingt Verbindungsdaten (insb. IP-Adresse, Zeitpunkt des Abrufs, User-Agent) an die Server von GitHub, um die Webseite auszuliefern und die Systemsicherheit zu gewährleisten (Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO – berechtigtes Interesse an einem sicheren und zuverlässigen Betrieb).
         </p>
 
-        <h3>4. Anonyme Statistik &amp; Quiz-Auswertung (GoatCounter)</h3>
-        <p>
-          Um nachzuvollziehen, wie oft das Quiz genutzt wird, an welcher Stelle ggf. abgebrochen wird und ob der Schwierigkeitsgrad der Regelfragen angemessen ist, nutzen wir den datenschutzfreundlichen Dienst <strong>GoatCounter</strong> (betrieben in der Europäischen Union).
-        </p>
-        <ul>
-          <li><strong>Erfasste Daten:</strong> Seitenaufruf, anonymisierte Quiz-Ereignisse (Fragenummer 1–10, ob eine Frage richtig oder falsch beantwortet wurde, erreichte Gesamtpunktzahl) sowie allgemeine technische Browsermerkmale (Bildschirmgröße, Sprache, Referrer).</li>
-          <li><strong>Keine Speicherung von IP-Adressen oder Cookies:</strong> GoatCounter legt keine Dateien auf deinem Gerät ab und speichert keine IP-Adressen. Zur kurzzeitigen Unterscheidung einzelner Sitzungen wird lediglich ein nicht umkehrbarer Hash im Arbeitsspeicher gebildet, der regelmäßig verworfen wird.</li>
-          <li><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der anonymen Auswertung und Verbesserung unseres Vereins- und Bildungsangebots).</li>
-        </ul>
+        <div id="privacy-analytics-section" class="legal-section-group">
+          <h3>4. Anonyme Statistik &amp; Quiz-Auswertung (GoatCounter)</h3>
+          <p>
+            Um nachzuvollziehen, wie oft das Quiz genutzt wird, an welcher Stelle ggf. abgebrochen wird und ob der Schwierigkeitsgrad der Regelfragen angemessen ist, nutzen wir den datenschutzfreundlichen Dienst <strong>GoatCounter</strong> (betrieben in der Europäischen Union).
+          </p>
+          <ul>
+            <li><strong>Erfasste Daten:</strong> Seitenaufruf (inkl. Vereinskennung), anonymisierte Quiz-Ereignisse (Fragenummer 1–10, ob eine Frage richtig oder falsch beantwortet wurde, erreichte Gesamtpunktzahl) sowie allgemeine technische Browsermerkmale (Bildschirmgröße, Sprache, Referrer).</li>
+            <li><strong>Keine Speicherung von IP-Adressen oder Cookies:</strong> GoatCounter legt keine Dateien auf deinem Gerät ab und speichert keine IP-Adressen. Zur kurzzeitigen Unterscheidung einzelner Sitzungen wird lediglich ein nicht umkehrbarer Hash im Arbeitsspeicher gebildet, der regelmäßig verworfen wird.</li>
+            <li><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der anonymen Auswertung und Verbesserung unseres Vereins- und Bildungsangebots).</li>
+          </ul>
+        </div>
 
-        <h3>5. Lokale Speicherung des Farbschemas (localStorage)</h3>
+        <h3 id="privacy-heading-storage">5. Lokale Speicherung des Farbschemas (localStorage)</h3>
         <p>
           Nur wenn du aktiv oben rechts auf den Schalter für das helle oder dunkle Design klickst, wird diese Einstellung (<code>light</code> oder <code>dark</code>) lokal in deinem Browser (<code>localStorage</code>) gespeichert. Diese Angabe verbleibt auf deinem Gerät und wird niemals an Server übertragen (§ 25 Abs. 2 Nr. 2 TDDDG).
         </p>
 
-        <h3>6. Deine Rechte</h3>
+        <h3 id="privacy-heading-rights">6. Deine Rechte</h3>
         <p>
-          Dir stehen nach der DSGVO die Rechte auf Auskunft (Art. 15), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Widerspruch gegen Verarbeitungen nach Art. 6 Abs. 1 lit. f DSGVO (Art. 21) sowie das Recht auf Beschwerde bei einer Datenschutz-Aufsichtsbehörde (Art. 77 DSGVO, z. B. der Landesbeauftragten für den Datenschutz Niedersachsen) zu.
+          Dir stehen nach der DSGVO die Rechte auf Auskunft (Art. 15), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Widerspruch gegen Verarbeitungen nach Art. 6 Abs. 1 lit. f DSGVO (Art. 21) sowie das Recht auf Beschwerde bei einer Datenschutz-Aufsichtsbehörde (Art. 77 DSGVO, z. B. der <span id="privacy-supervisory-authority">Landesbeauftragten für den Datenschutz Niedersachsen</span>) zu.
         </p>
       </div>
 
@@ -330,7 +339,5 @@
   </dialog>
 
   <script defer src="./js/app.js"></script>
-  <script data-goatcounter="https://biba-regeltest.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
