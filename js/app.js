@@ -529,6 +529,46 @@ function initThemeToggle() {
   });
 }
 
+/**
+ * Initialisiert die rechtlichen Dialoge (Impressum & Datenschutzerklärung)
+ * inkl. Light-Dismiss-Fallback für Browser ohne natives closedby="any"
+ */
+function initLegalDialogs() {
+  for (const trigger of document.querySelectorAll('[data-dialog-open]')) {
+    trigger.addEventListener('click', () => {
+      const targetId = trigger.getAttribute('data-dialog-open');
+      const dialog = targetId ? document.getElementById(targetId) : null;
+      if (dialog && typeof dialog.showModal === 'function') {
+        dialog.showModal();
+      }
+    });
+  }
+
+  if (typeof HTMLDialogElement !== 'undefined' && !('closedBy' in HTMLDialogElement.prototype)) {
+    const isOutsideDialog = (event, dialog) => {
+      const rect = dialog.getBoundingClientRect();
+      return (
+        event.clientX < rect.left ||
+        event.clientX > rect.right ||
+        event.clientY < rect.top ||
+        event.clientY > rect.bottom
+      );
+    };
+
+    for (const dialog of document.querySelectorAll('dialog[closedby="any"]')) {
+      let pressedOutside = false;
+      dialog.addEventListener('pointerdown', (event) => {
+        pressedOutside = event.target === dialog && isOutsideDialog(event, dialog);
+      });
+      dialog.addEventListener('pointerup', (event) => {
+        if (pressedOutside && event.target === dialog && isOutsideDialog(event, dialog)) {
+          dialog.close();
+        }
+      });
+    }
+  }
+}
+
 // Event-Listener registrieren
 btnStartQuiz.addEventListener('click', startQuiz);
 
@@ -546,4 +586,5 @@ btnShareResult.addEventListener('click', shareResult);
 
 // Initialisierung
 initThemeToggle();
+initLegalDialogs();
 loadQuestionCatalog();

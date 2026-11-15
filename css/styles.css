@@ -928,3 +928,147 @@ p {
   color: var(--color-text-muted);
 }
 
+.footer-nav {
+  margin-top: 0.35rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.footer-link-btn {
+  appearance: none;
+  background: none;
+  border: none;
+  padding: 0.25rem 0.35rem;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+}
+
+.footer-link-btn:hover {
+  color: var(--color-text);
+}
+
+.footer-sep {
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+}
+
+/* ==========================================================================
+   Legal Modal Dialogs (Impressum & Datenschutzerklärung)
+   ========================================================================== */
+dialog:modal {
+  overscroll-behavior: contain;
+}
+
+dialog::backdrop {
+  overflow: hidden;
+  overscroll-behavior: contain;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(2px);
+}
+
+.legal-dialog {
+  width: min(92vw, 560px);
+  max-height: 86dvh;
+  margin: auto;
+  padding: 0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  box-shadow: var(--shadow-card);
+}
+
+.legal-dialog-inner {
+  display: flex;
+  flex-direction: column;
+  max-height: 86dvh;
+}
+
+.legal-dialog-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  background-color: var(--biba-blue);
+  color: var(--biba-white);
+  border-bottom: 3px solid var(--biba-red);
+}
+
+.legal-dialog-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--biba-white);
+}
+
+.legal-dialog-close {
+  appearance: none;
+  background: rgba(255, 255, 255, 0.14);
+  color: var(--biba-white);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: var(--radius-sm);
+  min-block-size: 40px;
+  min-inline-size: 40px;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.legal-dialog-close:hover {
+  background: rgba(255, 255, 255, 0.24);
+}
+
+.legal-dialog-body {
+  padding: 1.25rem;
+  overflow-y: auto;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.legal-dialog-body h3 {
+  font-size: 0.96rem;
+  font-weight: 800;
+  margin-top: 0.4rem;
+}
+
+.legal-dialog-body h3:first-child {
+  margin-top: 0;
+}
+
+.legal-dialog-body ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.legal-dialog-body a {
+  color: inherit;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.legal-dialog-footer {
+  padding: 0.85rem 1.25rem;
+  border-top: 1px solid var(--color-border);
+  background-color: var(--color-surface-subtle);
+}
+
+

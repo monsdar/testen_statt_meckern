@@ -208,8 +208,126 @@
       <p class="footer-legal">
         Initiative „Testen statt Meckern“ · Regelreferenz: Offizielle DBB-/FIBA-Basketball-Regeln
       </p>
+      <nav class="footer-nav" aria-label="Rechtliche Hinweise">
+        <button type="button" class="footer-link-btn" data-dialog-open="dialog-impressum">
+          Impressum
+        </button>
+        <span class="footer-sep" aria-hidden="true">·</span>
+        <button type="button" class="footer-link-btn" data-dialog-open="dialog-privacy">
+          Datenschutzerklärung
+        </button>
+      </nav>
     </div>
   </footer>
+
+  <!-- MODAL: IMPRESSUM -->
+  <dialog id="dialog-impressum" class="legal-dialog" closedby="any" aria-labelledby="dialog-impressum-title">
+    <div class="legal-dialog-inner">
+      <header class="legal-dialog-header">
+        <h2 id="dialog-impressum-title" class="legal-dialog-title">Impressum</h2>
+        <form method="dialog">
+          <button type="submit" class="legal-dialog-close" aria-label="Impressum schließen" autofocus>
+            ✕
+          </button>
+        </form>
+      </header>
+
+      <div class="legal-dialog-body">
+        <h3>Angaben gemäß § 5 DDG</h3>
+        <p>
+          <strong>BG BiBA – Basketballgemeinschaft Bierden-Bassen-Achim</strong><br>
+          Zusammenschluss der Basketballabteilungen der Stammvereine TSV Bierden von 1928 e.V., TSV Bassen e.V. und TSV Achim 1860 e.V.
+        </p>
+        <p>
+          Jörg Grüneberg<br>
+          Am Berg 101<br>
+          28876 Oyten
+        </p>
+
+        <h3>Kontakt</h3>
+        <p>
+          E-Mail: <a href="mailto:info@bgbiba.net">info@bgbiba.net</a>
+        </p>
+
+        <h3>Redaktionell verantwortlich (§ 18 Abs. 2 MStV)</h3>
+        <p>
+          Jörg Grüneberg<br>
+          Am Berg 101<br>
+          28876 Oyten
+        </p>
+
+        <h3>Hinweis zu den Basketball-Regelwerken</h3>
+        <p>
+          Die Fragen und Erklärungen dieser nicht-kommerziellen Vereinsinitiative basieren auf den offiziellen Basketball-Regeln des Deutschen Basketball Bundes (DBB) sowie der FIBA.
+        </p>
+      </div>
+
+      <footer class="legal-dialog-footer">
+        <form method="dialog">
+          <button type="submit" class="btn btn-secondary">Schließen</button>
+        </form>
+      </footer>
+    </div>
+  </dialog>
+
+  <!-- MODAL: DATENSCHUTZERKLÄRUNG -->
+  <dialog id="dialog-privacy" class="legal-dialog" closedby="any" aria-labelledby="dialog-privacy-title">
+    <div class="legal-dialog-inner">
+      <header class="legal-dialog-header">
+        <h2 id="dialog-privacy-title" class="legal-dialog-title">Datenschutzerklärung</h2>
+        <form method="dialog">
+          <button type="submit" class="legal-dialog-close" aria-label="Datenschutzerklärung schließen" autofocus>
+            ✕
+          </button>
+        </form>
+      </header>
+
+      <div class="legal-dialog-body">
+        <h3>1. Verantwortlicher</h3>
+        <p>
+          BG BiBA – Basketballgemeinschaft Bierden-Bassen-Achim<br>
+          Jörg Grüneberg, Am Berg 101, 28876 Oyten<br>
+          E-Mail: <a href="mailto:info@bgbiba.net">info@bgbiba.net</a>
+        </p>
+
+        <h3>2. Grundsatz: Privacy by Design (Keine Cookies)</h3>
+        <p>
+          Dieses Regelquiz setzt <strong>keine Cookies</strong> ein und erstellt keine personenbezogenen Nutzerprofile. Eine Einwilligung über ein Cookie-Banner (§ 25 TDDDG) ist daher nicht erforderlich.
+        </p>
+
+        <h3>3. Bereitstellung der Webseite (GitHub Pages)</h3>
+        <p>
+          Diese statische Webseite wird über <em>GitHub Pages</em> (GitHub B.V., Prins Bernhardplein 200, 1097 JB Amsterdam, Niederlande / GitHub Inc., USA) gehostet. Beim Aufruf der Seite übermittelt dein Browser technisch bedingt Verbindungsdaten (insb. IP-Adresse, Zeitpunkt des Abrufs, User-Agent) an die Server von GitHub, um die Webseite auszuliefern und die Systemsicherheit zu gewährleisten (Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO – berechtigtes Interesse an einem sicheren und zuverlässigen Betrieb).
+        </p>
+
+        <h3>4. Anonyme Statistik &amp; Quiz-Auswertung (GoatCounter)</h3>
+        <p>
+          Um nachzuvollziehen, wie oft das Quiz genutzt wird, an welcher Stelle ggf. abgebrochen wird und ob der Schwierigkeitsgrad der Regelfragen angemessen ist, nutzen wir den datenschutzfreundlichen Dienst <strong>GoatCounter</strong> (betrieben in der Europäischen Union).
+        </p>
+        <ul>
+          <li><strong>Erfasste Daten:</strong> Seitenaufruf, anonymisierte Quiz-Ereignisse (Fragenummer 1–10, ob eine Frage richtig oder falsch beantwortet wurde, erreichte Gesamtpunktzahl) sowie allgemeine technische Browsermerkmale (Bildschirmgröße, Sprache, Referrer).</li>
+          <li><strong>Keine Speicherung von IP-Adressen oder Cookies:</strong> GoatCounter legt keine Dateien auf deinem Gerät ab und speichert keine IP-Adressen. Zur kurzzeitigen Unterscheidung einzelner Sitzungen wird lediglich ein nicht umkehrbarer Hash im Arbeitsspeicher gebildet, der regelmäßig verworfen wird.</li>
+          <li><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der anonymen Auswertung und Verbesserung unseres Vereins- und Bildungsangebots).</li>
+        </ul>
+
+        <h3>5. Lokale Speicherung des Farbschemas (localStorage)</h3>
+        <p>
+          Nur wenn du aktiv oben rechts auf den Schalter für das helle oder dunkle Design klickst, wird diese Einstellung (<code>light</code> oder <code>dark</code>) lokal in deinem Browser (<code>localStorage</code>) gespeichert. Diese Angabe verbleibt auf deinem Gerät und wird niemals an Server übertragen (§ 25 Abs. 2 Nr. 2 TDDDG).
+        </p>
+
+        <h3>6. Deine Rechte</h3>
+        <p>
+          Dir stehen nach der DSGVO die Rechte auf Auskunft (Art. 15), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Widerspruch gegen Verarbeitungen nach Art. 6 Abs. 1 lit. f DSGVO (Art. 21) sowie das Recht auf Beschwerde bei einer Datenschutz-Aufsichtsbehörde (Art. 77 DSGVO, z. B. der Landesbeauftragten für den Datenschutz Niedersachsen) zu.
+        </p>
+      </div>
+
+      <footer class="legal-dialog-footer">
+        <form method="dialog">
+          <button type="submit" class="btn btn-secondary">Schließen</button>
+        </form>
+      </footer>
+    </div>
+  </dialog>
 
   <script defer src="./js/app.js"></script>
   <script data-goatcounter="https://biba-regeltest.goatcounter.com/count"
