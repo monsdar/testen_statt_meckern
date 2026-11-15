@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 /**
- * BG BiBA – "Testen statt Meckern" Quiz-Engine
+ * "Testen statt Meckern" – Basketball-Regelquiz Engine
  * Reine statische Vanilla-JS-Anwendung für GitHub Pages
  */
 
@@ -22,14 +22,14 @@ const pendingAnalyticsEvents = [];
 
 /**
  * Liest die Vereins-Konfiguration aus window.CLUB_CONFIG (js/config.js)
- * mit sicheren Standardwerten der BG BiBA als Fallback.
+ * mit sicheren Platzhalter-Standardwerten als Fallback.
  */
 function getClubConfig() {
   return window.CLUB_CONFIG || {};
 }
 
 function getClubShortName() {
-  return getClubConfig().club?.shortName || 'BG BiBA';
+  return getClubConfig().club?.shortName || 'BC Musterstadt';
 }
 
 function getInitiativeName() {
@@ -134,10 +134,10 @@ function initAnalytics() {
 function applyClubConfig() {
   const cfg = getClubConfig();
   const shortName = getClubShortName();
-  const fullName = cfg.club?.fullName ?? 'Basketballgemeinschaft Bierden-Bassen-Achim';
-  const subline = cfg.club?.subline ?? 'TSV Bierden von 1928 e.V. · TSV Bassen e.V. · TSV Achim 1860 e.V.';
+  const fullName = cfg.club?.fullName ?? 'Basketball-Club Musterstadt 1990 e.V.';
+  const subline = cfg.club?.subline ?? 'Abteilung Basketball · Musterstadt';
   const initiative = getInitiativeName();
-  const contactEmail = cfg.club?.contactEmail ?? 'info@bgbiba.net';
+  const contactEmail = cfg.club?.contactEmail ?? 'schiri@bc-musterstadt.example';
 
   // Header
   const headerLogo = document.getElementById('header-logo');

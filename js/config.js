@@ -7,10 +7,10 @@
  * Ihr möchtet dieses Regelquiz für euren eigenen Basketballverein nutzen?
  * Ihr müsst KEINE HTML-, CSS- oder App-Dateien umbauen!
  *
- * Passt einfach die Werte in dieser Datei an und legt eure Vereinslogos
- * im Ordner `./assets/` ab. Dadurch könnt ihr später jederzeit mit einem
- * Klick ("Sync fork" auf GitHub) neue Regelfragen aus dem Haupt-Repository
- * übernehmen, ohne dass eure Vereinsdaten überschrieben werden.
+ * Passt einfach die Platzhalter-Werte in dieser Datei an eure Vereinsdaten an
+ * und legt eure Vereinslogos im Ordner `./assets/` ab. Dadurch könnt ihr später
+ * jederzeit mit einem Klick ("Sync fork" auf GitHub) neue Regelfragen aus dem
+ * Haupt-Repository übernehmen, ohne dass eure Vereinsdaten überschrieben werden.
  */
 
 window.CLUB_CONFIG = {
@@ -19,20 +19,20 @@ window.CLUB_CONFIG = {
   // --------------------------------------------------------------------------
   club: {
     // Kurzname des Vereins (für Header, Titel, Teilen-Text & 10/10-Auswertung)
-    shortName: 'BG BiBA',
+    shortName: 'BC Musterstadt',
 
     // Vollständiger Vereinsname (für Untertitel & Footer)
-    fullName: 'Basketballgemeinschaft Bierden-Bassen-Achim',
+    fullName: 'Basketball-Club Musterstadt 1990 e.V.',
 
     // Optionale Zusatzzeile im Footer (z. B. Stammvereine, Abteilung oder Slogan;
     // leer lassen '', falls nicht benötigt)
-    subline: 'TSV Bierden von 1928 e.V. · TSV Bassen e.V. · TSV Achim 1860 e.V.',
+    subline: 'Abteilung Basketball · Musterstadt',
 
     // Name der Aktion / Initiative
     initiativeName: 'Testen statt Meckern',
 
     // Kontakt-E-Mail für Schiedsrichter- & Kampfrichter-Interessierte (Auswertungs-Screen)
-    contactEmail: 'info@bgbiba.net',
+    contactEmail: 'schiri@bc-musterstadt.example',
   },
 
   // --------------------------------------------------------------------------
@@ -59,19 +59,19 @@ window.CLUB_CONFIG = {
   // cardLogoLight und cardLogoDark denselben Pfad ein.
   logos: {
     // Logo im farbigen Header oben links
-    headerLogo: './assets/bgbiba_full_black_white.png',
+    headerLogo: './assets/logo-placeholder.svg',
 
     // Logo in der Schiri-Box auf der Auswertungsseite (Helles Design)
-    cardLogoLight: './assets/bgbiba_full_small.png',
+    cardLogoLight: './assets/logo-placeholder.svg',
 
     // Logo in der Schiri-Box auf der Auswertungsseite (Dunkles Design)
-    cardLogoDark: './assets/bgbiba_full_black_white.png',
+    cardLogoDark: './assets/logo-placeholder.svg',
 
     // Browser-Icon (Favicon)
-    favicon: './assets/bgbiba_full_tiny.png',
+    favicon: './assets/logo-placeholder.svg',
 
     // Barrierefreier Alternativtext für Screenreader
-    altText: 'Vereinswappen der BG BiBA',
+    altText: 'Vereinswappen BC Musterstadt',
   },
 
   // --------------------------------------------------------------------------
@@ -84,16 +84,16 @@ window.CLUB_CONFIG = {
   //                      die Links zu eurer bestehenden Vereins-Webseite ein. Dann
   //                      öffnen die Footer-Links direkt eure vorhandene Webseite.
   legal: {
-    organizationName: 'BG BiBA – Basketballgemeinschaft Bierden-Bassen-Achim',
+    organizationName: 'BC Musterstadt 1990 e.V.',
     organizationDetails:
-      'Zusammenschluss der Basketballabteilungen der Stammvereine TSV Bierden von 1928 e.V., TSV Bassen e.V. und TSV Achim 1860 e.V.',
-    representativeName: 'Jörg Grüneberg',
-    street: 'Am Berg 101',
-    postalCodeCity: '28876 Oyten',
-    email: 'info@bgbiba.net',
+      'Eingetragener Verein (Vereinsregister VR 12345, Amtsgericht Musterstadt)',
+    representativeName: 'Max Mustermann (1. Vorsitzender)',
+    street: 'Musterstraße 1',
+    postalCodeCity: '12345 Musterstadt',
+    email: 'info@bc-musterstadt.example',
     phone: '', // Optional: Telefonnummer (wird nur eingeblendet, wenn ausgefüllt)
-    responsiblePersonMStV: 'Jörg Grüneberg\nAm Berg 101\n28876 Oyten',
-    supervisoryAuthority: 'Landesbeauftragten für den Datenschutz Niedersachsen',
+    responsiblePersonMStV: 'Max Mustermann\nMusterstraße 1\n12345 Musterstadt',
+    supervisoryAuthority: 'zuständigen Landesdatenschutzbehörde',
 
     // Optional (Option B): Externe Links statt eingebauter Dialog-Popups
     externalImpressumUrl: '',
@@ -117,7 +117,7 @@ window.CLUB_CONFIG = {
     endpoint: 'https://biba-regeltest.goatcounter.com/count',
     // Optionales Kürzel für die Vereins-Zuordnung in der Statistik
     // (wird automatisch aus `club.shortName` gebildet, falls leer gelassen)
-    clubSlug: 'bg-biba',
+    clubSlug: '',
   },
 };
 
@@ -142,7 +142,7 @@ window.CLUB_CONFIG = {
       rootStyle.setProperty('--logo-border-radius', cfg.theme.logoBorderRadius);
     }
 
-    const shortName = cfg.club?.shortName || 'BG BiBA';
+    const shortName = cfg.club?.shortName || 'BC Musterstadt';
     const fullName = cfg.club?.fullName || shortName;
     const initiative = cfg.club?.initiativeName || 'Testen statt Meckern';
 
@@ -185,4 +185,3 @@ window.CLUB_CONFIG = {
     // Fehler in der Früh-Initialisierung niemals nach außen werfen
   }
 })();
-
