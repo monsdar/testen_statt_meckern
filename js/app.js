@@ -17,6 +17,49 @@ const quizState = {
 };
 
 let catalogLoadPromise = null;
+const pendingAnalyticsEvents = [];
+
+/**
+ * Sendet ein anonymes Custom Event an GoatCounter (non-blocking & fehlertolerant).
+ * Falls das async-Skript bei schwachem Hallenempfang verzögert lädt, werden frühe
+ * Events kurzzeitig im Speicher gepuffert und bei Bereitschaft nachgesendet.
+ */
+function flushPendingAnalyticsEvents() {
+  try {
+    if (!window.goatcounter || typeof window.goatcounter.count !== 'function') {
+      return;
+    }
+    while (pendingAnalyticsEvents.length > 0) {
+      const evt = pendingAnalyticsEvents.shift();
+      window.goatcounter.count({
+        path: evt.path,
+        title: evt.title,
+        event: true,
+      });
+    }
+  } catch {
+    // Tracking-Fehler oder Content-Blocker niemals nach außen werfen
+  }
+}
+
+function trackEvent(path, title) {
+  try {
+    if (window.goatcounter && typeof window.goatcounter.count === 'function') {
+      flushPendingAnalyticsEvents();
+      window.goatcounter.count({
+        path,
+        title,
+        event: true,
+      });
+    } else if (pendingAnalyticsEvents.length < 25) {
+      pendingAnalyticsEvents.push({ path, title });
+    }
+  } catch {
+    // Tracking-Fehler oder Content-Blocker niemals nach außen werfen
+  }
+}
+
+window.addEventListener('load', flushPendingAnalyticsEvents);
 
 // DOM-Referenzen
 const viewStart = document.getElementById('view-start');
@@ -216,6 +259,12 @@ function renderCurrentQuestion(isFirstQuestion = false) {
     document.title = pageTitle;
     questionText.focus();
   }
+
+  const stepNumber = String(index + 1).padStart(2, '0');
+  trackEvent(
+    `quiz/step/${stepNumber}`,
+    `Quiz-Fortschritt: Frage ${index + 1} von ${total}`
+  );
 }
 
 /**
@@ -287,6 +336,14 @@ function handleAnswerSelection(selectedIndex) {
 
   explanationBox.hidden = false;
   srAnnouncer.textContent = `${feedbackBadge.textContent}. ${feedbackHeadline.textContent} ${question.explanation}`;
+
+  const questionId = question.id || `q-${quizState.currentIndex + 1}`;
+  const outcome = isCorrect ? 'correct' : 'wrong';
+  const outcomeLabel = isCorrect ? 'Richtig' : 'Falsch';
+  trackEvent(
+    `quiz/q/${questionId}/${outcome}`,
+    `${outcomeLabel}: ${questionId} (${question.category})`
+  );
 }
 
 /**
@@ -390,6 +447,12 @@ function showResults() {
     viewResult,
     resultHeadline,
     `Auswertung: ${score}/${total} | BG BiBA Regelquiz`
+  );
+
+  const paddedScore = String(score).padStart(2, '0');
+  trackEvent(
+    `quiz/finish/score-${paddedScore}`,
+    `Quiz abgeschlossen: ${score} von ${total} richtig`
   );
 }
 

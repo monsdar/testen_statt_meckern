@@ -130,6 +130,18 @@ Die Auswertungsfunktion `getEvaluation(score)` liefert passend zur erreichten Pu
 | **8–9 / 10** | 🔥 *Kampfgericht-Kandidat* | **„{score}/10 Richtige! Fast fehlerfrei! Mit diesem Regelwissen wärst du eine echte Verstärkung am Anschreibertisch oder mit der Pfeife auf dem Feld."** |
 | **10 / 10** | 🏆 *Schiri-Versteher* | **„10/10 Richtige! Perfekt - Du weißt wahrscheinlich ganz genau wie schwer es ist immer die richtigen Entscheidungen zu treffen."** |
 
+### 4.4 Anonyme Auswertung via GoatCounter (Privacy-First Analytics)
+Über das asynchrone GoatCounter-Skript (`https://biba-regeltest.goatcounter.com/count`) werden ohne Cookies und DSGVO-konform sowohl Seitenaufrufe als auch inhaltliche Quiz-Metriken als Custom Events (`event: true`) erfasst:
+
+| Auswertungsziel | Event-Pfad (`path`) | Auslöser | Filter im GoatCounter-Dashboard |
+|---|---|---|---|
+| **Seitenbesucher gesamt** | `/` *(Pageview)* | Automatisches Laden der Startseite | Standard-Ansicht |
+| **Fortschritt & Abbruchpunkt (Drop-off)** | `quiz/step/01` bis `quiz/step/10` | Anzeigen von Frage 1 bis 10 (`renderCurrentQuestion`) | `quiz/step/` |
+| **Quiz-Abschlüsse & Punkteverteilung** | `quiz/finish/score-00` bis `quiz/finish/score-10` | Erreichen der Endauswertung (`showResults`) | `quiz/finish/` |
+| **Schwierigkeitsgrad pro Frage** | `quiz/q/<id>/correct` bzw. `quiz/q/<id>/wrong` | Auswahl einer Antwort (`handleAnswerSelection`) | `quiz/q/<id>` (Einzelfrage) bzw. `/correct` vs. `/wrong` (Gesamtquote) |
+
+Alle Tracking-Aufrufe laufen über `trackEvent(path, title)` in `js/app.js` vollständig fehlertolerant (`try/catch`), sodass Adblocker oder Verbindungsabbrüche in der Sporthalle den Quiz-Ablauf niemals beeinträchtigen.
+
 ---
 
 ## 5. UI-Architektur & BG BiBA Design-System (`css/styles.css`)
